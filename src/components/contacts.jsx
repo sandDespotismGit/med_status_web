@@ -39,7 +39,7 @@ const Contacts = () => {
           <Input type="text" background="white" width="15%" placeholder="+7 962-630-23-03"></Input>
           <Button
             borderRadius="30px"
-            backgroundColor="#2AABEE"
+            backgroundColor="#138b96"
             color="white"
             width="15%"
           >

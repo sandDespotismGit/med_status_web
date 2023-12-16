@@ -10,13 +10,19 @@ const Carousel = () => {
       backgroundImage={scooters}
       padding="50px"
       backgroundSize="contain"
+      borderRadius="5px"
+      boxShadow="0px 7px 4px 0px rgba(0, 0, 0, 0.25)"
     >
-      <VStack align='center' justify='space-between' spacing='30px'> 
-        <Heading color="white">Бесплатная вакцинация от гриппа</Heading>
-        <Text color="white">
-          Сезон вакцинации от гриппа открыт. Успейте защитить себя и свою семью.
-        </Text>
-        <Button borderRadius="30px" borderColor="#2AABEE" borderStyle='solid' borderWidth='3px' color="white" background='transparent'>
+      <VStack align="center" justify="space-between" spacing="30px">
+        <Heading color="#085D65">Бесплатная вакцинация от гриппа</Heading>
+        <Button
+          borderRadius="30px"
+          borderColor="#085D65"
+          borderStyle="solid"
+          borderWidth="3px"
+          color="white"
+          background="transparent"
+        >
           Записаться
         </Button>
       </VStack>

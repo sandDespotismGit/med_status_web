@@ -1,31 +1,25 @@
 import { Image, VStack, HStack, Text, Heading } from "@chakra-ui/react";
-import map from "./../images/map.jpg";
+import map from "./../images/map.png";
+import logo from "./../images/back.png";
 const MapBlock = () => {
   return (
-    <VStack
-    marginTop={0}
-      padding="30px"
-      backgroundImage={map}
-      width="100%"
-      height='50vh'
-      align="flex-start"
-      backgroundSize='contain'
-    >
+    <HStack width="100%" justify="space-around" align='flex-start'>
       <VStack
-        backgroundColor="deepskyblue"
-        width="25%"
-        color="white"
+        backgroundColor="white"
+        boxShadow="0px 7px 4px 3px rgba(0, 0, 0, 0.25)"
+        borderRadius="20px"
         align="flex-start"
-        textAlign='left'
-        padding='20px'
+        padding="25px"
+        width="30%"
       >
-        <Heading size="sm">Контакты</Heading>
-        <Text>1231231231231231</Text>
-        <Text>1231231231231231</Text>
-        <Text>1231231231231231</Text>
-        <Text>1231231231231231</Text>
+        <Image src={logo} width="30%" />
+        <Text>Ежедневно с 8:00 до 20:00</Text>
+        <Text fontWeight={700}>Ульяновск, Минаева, 48А</Text>
+        <Text>Телефон:</Text>
+        <Text fontWeight={700}>+7 (8422) 73-78-78</Text>
       </VStack>
-    </VStack>
+      <Image src={map} width="40%" borderRadius="20px" />
+    </HStack>
   );
 };
 export default MapBlock;

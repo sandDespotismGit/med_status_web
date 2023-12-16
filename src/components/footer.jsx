@@ -12,16 +12,38 @@ import { GiHealthNormal } from "react-icons/gi";
 import logo from "./../images/back.png";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Footer = () => {
   return (
     <VStack
       align="center"
       width="100%"
       color="#0B646C"
       backgroundColor="white"
-      borderBottomRadius="15px"
+      borderTopRadius="15px"
       boxShadow="0px 7px 4px 0px rgba(0, 0, 0, 0.25)"
     >
+      <HStack
+        width="100%"
+        height="100%"
+        justify="center"
+        spacing="10px"
+        padding="15px 25px 10px 25px"
+      >
+        <Link>О нас</Link>
+        <Divider orientation="vertical" />
+        <Link>Направления</Link>
+        <Divider orientation="vertical" />
+        <Link>Врачи</Link>
+        <Divider orientation="vertical" />
+        <Link>Цены</Link>
+        <Divider orientation="vertical" />
+        <Link>Отзывы</Link>
+        <Divider orientation="vertical" />
+        <Link>Контакты</Link>
+        <Divider orientation="vertical" />
+        <Link>Документация</Link>
+      </HStack>
+      <Divider></Divider>
       <HStack
         width="100%"
         padding="10px 25px 10px 25px"
@@ -47,29 +69,7 @@ const Header = () => {
           </VStack>
         </HStack>
       </HStack>
-      <Divider></Divider>
-      <HStack
-        width="100%"
-        height="100%"
-        justify="center"
-        spacing="10px"
-        padding="10px 25px 10px 25px"
-      >
-        <Link>О нас</Link>
-        <Divider orientation="vertical" />
-        <Link>Направления</Link>
-        <Divider orientation="vertical" />
-        <Link>Врачи</Link>
-        <Divider orientation="vertical" />
-        <Link>Цены</Link>
-        <Divider orientation="vertical" />
-        <Link>Отзывы</Link>
-        <Divider orientation="vertical" />
-        <Link>Контакты</Link>
-        <Divider orientation="vertical" />
-        <Link>Документация</Link>
-      </HStack>
     </VStack>
   );
 };
-export default Header;
+export default Footer;
