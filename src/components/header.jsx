@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <VStack
       align="center"
-      width="100%"
+      width="80%"
       color="#0B646C"
       backgroundColor="white"
       borderBottomRadius="15px"
@@ -47,16 +47,16 @@ const Header = () => {
           </VStack>
         </HStack>
       </HStack>
-      <Divider></Divider>
+      <Divider borderColor={'#A0A0A0'}/>
       <HStack
         width="100%"
         height="100%"
         justify="center"
         spacing="10px"
-        padding="10px 25px 10px 25px"
+        padding="10px 25px 15px 25px"
       >
         <Link>О нас</Link>
-        <Divider orientation="vertical" />
+        <Divider orientation={"vertical"} borderColor={'#A0A0A0'} />
         <Link>Направления</Link>
         <Divider orientation="vertical" />
         <Link>Врачи</Link>

@@ -6,16 +6,16 @@ import "swiper/css";
 const Carousel = () => {
   return (
     <VStack
-      width="100%"
+      width="80%"
       backgroundImage={scooters}
-      padding="50px"
+      padding="170px"
       backgroundSize="contain"
       borderRadius="5px"
       boxShadow="0px 7px 4px 0px rgba(0, 0, 0, 0.25)"
     >
       <VStack align="center" justify="space-between" spacing="30px">
-        <Heading color="#085D65">Бесплатная вакцинация от гриппа</Heading>
-        <Button
+        <Heading color="#FFFFFF">Акция</Heading>
+        {/*<Button
           borderRadius="30px"
           borderColor="#085D65"
           borderStyle="solid"
@@ -24,7 +24,7 @@ const Carousel = () => {
           background="transparent"
         >
           Записаться
-        </Button>
+        </Button>*/}
       </VStack>
     </VStack>
   );

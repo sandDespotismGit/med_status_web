@@ -4,13 +4,13 @@ import clinics from "./../images/clicnics.png";
 
 const AboutUs = () => {
   return (
-    <VStack width="100%" spacing="25px">
+    <VStack width="80%" spacing="25px">
       <Heading size="lg" color="#085D65">
         О клинике
       </Heading>
       <HStack width="100%" justify="space-between">
         <Image src={clinics} />
-        <Text width="40%">
+        <Text width="100%">
           Медицинский центр «Венздрав» — современный медицинский центр,
           оснащенный передовым медицинским оборудованием экспертного класса.
           <br />

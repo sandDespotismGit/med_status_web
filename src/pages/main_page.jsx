@@ -17,7 +17,7 @@ const MainPage = () => {
       paddingLeft={["10px", "15px", "30px", "45px", "60px"]}
       paddingRight={["10px", "15px", "30px", "45px", "60px"]}
       backgroundColor="#E7F1EE"
-      spacing="30px"
+      spacing="50px"
     >
       <Header />
       <Carousel />
@@ -26,8 +26,7 @@ const MainPage = () => {
           Наши направления
         </Heading>
         <Text>
-          У нас вы найдете все услуги, необходимые для поддержания здоровья
-          вашей семьи
+            Мы - многопрофильная клиника, осуществляем комплексное лечение
         </Text>
       </VStack>
       <InfoPanel />
