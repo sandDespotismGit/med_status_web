@@ -90,7 +90,7 @@ const OurDocs = () => {
       >
         <Image src={telegina} />
         <Text fontWeight={700}>Степанова Людмила Александровна</Text>
-        <Text color="#89CECA">Гинекологг</Text>
+        <Text color="#89CECA">Гинеколог</Text>
         <HStack width="100%" justify="space-between">
           <Text fontSize="14px"></Text>
           <Text fontSize="14px">Приём: от 1000 руб</Text>

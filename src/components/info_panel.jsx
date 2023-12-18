@@ -28,7 +28,7 @@ const InfoPanel = () => {
       templateColumns="repeat(4, 2fr)"
       gap={["10px", "12px", "14px", "15px", "20px"]}
       marginTop="30px"
-      width="80%"
+      width="70%"
     >
       <GridItem>
         <VStack

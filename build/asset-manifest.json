@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.d37a65bb.css",
-    "main.js": "./static/js/main.9fd3c368.js",
+    "main.js": "./static/js/main.7b7c1623.js",
     "static/media/map.png": "./static/media/map.901fa0bb18d129e724d3.png",
     "static/media/license2.png": "./static/media/license2.22ebc1f0e721346d8c86.png",
     "static/media/clicnics.png": "./static/media/clicnics.782d80cbc848289fbcfb.png",
@@ -16,10 +16,10 @@
     "static/media/cosmetolog.png": "./static/media/cosmetolog.edfefbc5b26e420979fb.png",
     "index.html": "./index.html",
     "main.d37a65bb.css.map": "./static/css/main.d37a65bb.css.map",
-    "main.9fd3c368.js.map": "./static/js/main.9fd3c368.js.map"
+    "main.7b7c1623.js.map": "./static/js/main.7b7c1623.js.map"
   },
   "entrypoints": [
     "static/css/main.d37a65bb.css",
-    "static/js/main.9fd3c368.js"
+    "static/js/main.7b7c1623.js"
   ]
 }

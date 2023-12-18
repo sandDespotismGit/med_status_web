@@ -6,7 +6,7 @@ import city from "./../images/city.png";
 import medics from "./../images/medics.png";
 const Benefits = () => {
   return (
-    <VStack width="100%" spacing="25px">
+    <VStack width="80%" spacing="25px">
       <Heading size="lg" color="#085D65">
         Наши преимущества
       </Heading>
