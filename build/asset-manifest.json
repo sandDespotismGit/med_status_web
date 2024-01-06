@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "./static/css/main.e6c13ad2.css",
-    "main.js": "./static/js/main.89b772c1.js",
+    "main.js": "./static/js/main.2c8a5c39.js",
+    "static/media/action.jpg": "./static/media/action.239d3c151d81912710d4.jpg",
     "static/media/hospital4.webp": "./static/media/hospital4.770f03ecd1375d62163a.webp",
     "static/media/hospital1.webp": "./static/media/hospital1.0cfb0eccbe668e11986e.webp",
     "static/media/hospital6.webp": "./static/media/hospital6.929b0030f8da9af47502.webp",
@@ -20,9 +21,9 @@
     "static/media/minnabetdinov.png": "./static/media/minnabetdinov.eaeb33c9596529a0530c.png",
     "static/media/prodocs.png": "./static/media/prodocs.77aaa1b34b19f7d496e9.png",
     "static/media/yandex.png": "./static/media/yandex.db5705eaf3a6776926aa.png",
-    "static/media/back.jpg": "./static/media/back.99595af7b85518702a53.jpg",
     "static/media/back.png": "./static/media/back.9e92245af52f664ebbfe.png",
     "static/media/ginecolog.svg": "./static/media/ginecolog.580833b64b2ebe40e568a1869c02f230.svg",
+    "static/media/white.jpg": "./static/media/white.2ce07c3bf2f0455d5cf2.jpg",
     "static/media/cosmetolog.png": "./static/media/cosmetolog.edfefbc5b26e420979fb.png",
     "static/media/analys.svg": "./static/media/analys.5df971ce934b128b7dec9080d81ee0c3.svg",
     "static/media/cardio.svg": "./static/media/cardio.d74bf1f1fa075cae24b6d3355c43a4c3.svg",
@@ -30,10 +31,10 @@
     "index.html": "./index.html",
     "static/media/shadowlogo.svg": "./static/media/shadowlogo.368b9d11e5cfacaab3494a8b1d76f590.svg",
     "main.e6c13ad2.css.map": "./static/css/main.e6c13ad2.css.map",
-    "main.89b772c1.js.map": "./static/js/main.89b772c1.js.map"
+    "main.2c8a5c39.js.map": "./static/js/main.2c8a5c39.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.89b772c1.js"
+    "static/js/main.2c8a5c39.js"
   ]
 }
