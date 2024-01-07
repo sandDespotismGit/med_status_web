@@ -9,36 +9,41 @@ import Benefits from "../components/benefits";
 import Checkin from "../components/checkin";
 import Licenses from "../components/licenses";
 import Footer from "../components/footer";
+import ReviewsAboutUs from "../components/reviews_about_us";
+import useWindowDimensions from "../hooks/window_dimensions";
 import { Heading, VStack, Text, Button } from "@chakra-ui/react";
 const MainPage = () => {
+  const { width, height } = useWindowDimensions();
   return (
-    <VStack
-      width="100%"
-      paddingLeft={["10px", "15px", "30px", "45px", "60px"]}
-      paddingRight={["10px", "15px", "30px", "45px", "60px"]}
-      backgroundColor="#E7F1EE"
-      spacing="30px"
-    >
-      <Header />
-      <Carousel />
-      <VStack width="30%" align="center" textAlign="center">
-        <Heading size="lg" color="#085D65">
-          Наши направления
-        </Heading>
-        <Text>
-          У нас вы найдете все услуги, необходимые для поддержания здоровья
-          вашей семьи
-        </Text>
-      </VStack>
-      <InfoPanel />
-      <VStack width="30%" align="center" textAlign="center">
-        <Heading size="lg" color="#085D65">
-          Наши врачи
-        </Heading>
-        <Text>С вами рядом будут высококвалифицированные специалисты</Text>
-      </VStack>
-      <OurDocs />
-      {/* <VStack align="center" marginTop="30px" marginBottom="30px">
+    <VStack width="100%" overflowX='hidden'>
+      <VStack
+        width="100%"
+        paddingLeft={["10px", "15px", "30px", "45px", "225px"]}
+        paddingRight={["10px", "15px", "30px", "45px", "225px"]}
+        backgroundColor="#E7F1EE"
+        spacing="30px"
+        paddingBottom={"30px"}
+      >
+        <Header />
+        <Carousel />
+        <VStack width="30%" align="center" textAlign="center">
+          <Heading size="lg" color="#085D65">
+            Наши направления
+          </Heading>
+          <Text>
+            У нас вы найдете все услуги, необходимые для поддержания здоровья
+            вашей семьи
+          </Text>
+        </VStack>
+        <InfoPanel />
+        <VStack width="30%" align="center" textAlign="center">
+          <Heading size="lg" color="#085D65">
+            Наши врачи
+          </Heading>
+          <Text>С вами рядом будут высококвалифицированные специалисты</Text>
+        </VStack>
+        <OurDocs />
+        {/* <VStack align="center" marginTop="30px" marginBottom="30px">
         <Button
           borderRadius="30px"
           borderColor="#138b96"
@@ -50,12 +55,15 @@ const MainPage = () => {
           Все врачи
         </Button>
       </VStack> */}
-      <AboutUs />
-      <Benefits />
-      <Reviews />
-      <Checkin />
-      <Licenses />
-      <MapBlock />
+        <AboutUs />
+        <Benefits />
+        <Reviews />
+        {width >= 768 ? <ReviewsAboutUs /> : null}
+
+        <Checkin />
+        <Licenses />
+        <MapBlock />
+      </VStack>
       <Footer />
     </VStack>
   );

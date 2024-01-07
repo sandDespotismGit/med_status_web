@@ -11,6 +11,7 @@ const MapBlock = () => {
         align="flex-start"
         padding="25px"
         width="30%"
+        height={'30vh'}
       >
         <Image src={logo} width="30%" />
         <Text>Ежедневно с 8:00 до 20:00</Text>
@@ -18,7 +19,7 @@ const MapBlock = () => {
         <Text>Телефон:</Text>
         <Text fontWeight={700}>+7 (8422) 73-78-78</Text>
       </VStack>
-      <Image src={map} width="40%" borderRadius="20px" />
+      <Image src={map} width="30%" height={'30vh'} borderRadius="20px" />
     </HStack>
   );
 };

@@ -18,6 +18,20 @@ const theme = extendTheme({
             color: "main_yellow",
           },
         },
+        benefits_green: {
+          padding: "25px",
+          color: "#085D65",
+          borderRadius: "13px",
+          border: "1px solid transparent",
+          textShadow: "0px 4px 40px rgba(0, 0, 0, 0.25)",
+          fontSize: ["14px", "16px", "16px", "18px", "20px"],
+          fontWeight: "700",
+          width: "100%",
+          _hover: {
+            borderRadius: "13px",
+            border: "1px solid #0F939F",
+          },
+        },
       },
     },
     Button: {

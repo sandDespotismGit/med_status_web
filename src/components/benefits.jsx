@@ -1,143 +1,104 @@
-import { HStack, VStack, Image, Text, Heading } from "@chakra-ui/react";
-import personal_icon from "./../images/personal_icon.png";
-import effective from "./../images/effective_icon.png";
-import query from "./../images/query.png";
-import city from "./../images/city.png";
-import medics from "./../images/medics.png";
+import { HStack, VStack, Image, Text, Heading, Stack } from "@chakra-ui/react";
+import hospital1 from "./../images/hospital1.webp";
+import hospital2 from "./../images/hospital2.webp";
+import hospital3 from "./../images/hospital3.webp";
+import hospital4 from "./../images/hospital4.webp";
+import hospital5 from "./../images/hospital5.webp";
+import hospital6 from "./../images/hospital6.webp";
+import useWindowDimensions from "../hooks/window_dimensions";
+import { useState } from "react";
 const Benefits = () => {
+  const [side_image, setSideImage] = useState(hospital1);
+  const { width, height } = useWindowDimensions();
   return (
     <VStack width="100%" spacing="25px">
       <Heading size="lg" color="#085D65">
         Наши преимущества
       </Heading>
-      <HStack width="100%" align="center" justify="space-around">
-        <VStack>
+      <Stack
+        justify="space-between"
+        width="100%"
+        align="center"
+        direction={width <= 768 ? "column" : "row"}
+      >
+        <VStack spacing="10px" align="flex-start">
           <HStack>
-            <Image src={personal_icon} width="50px" height="50px" />
-            <HStack
-              backgroundColor="white"
-              boxShadow="0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
-              borderRadius="13px"
-              padding="10px"
-              width="30vw"
+            <Text
+              variant="benefits_green"
+              onClick={() => setSideImage(hospital1)}
+              onMouseOver={() => setSideImage(hospital1)}
             >
-              <Text>Высококвалфицированный медицинский персонал</Text>
-            </HStack>
+              Эффективное лечение
+            </Text>
+          </HStack>{" "}
+          <HStack>
+            <Text
+              variant="benefits_green"
+              onClick={() => setSideImage(hospital2)}
+              onMouseOver={() => setSideImage(hospital2)}
+            >
+              Высокий уровень обслуживания
+            </Text>
           </HStack>
           <HStack>
-            <Image src={effective} width="50px" height="50px" />
-            <HStack
-              backgroundColor="white"
-              boxShadow="0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
-              borderRadius="13px"
-              padding="10px"
-              width="30vw"
+            <Text
+              variant="benefits_green"
+              onClick={() => setSideImage(hospital3)}
+              onMouseOver={() => setSideImage(hospital3)}
             >
-              <Text>Эффективное лечение</Text>
-            </HStack>
+              Удобное расположение в центре города
+            </Text>
           </HStack>
           <HStack>
-            <Image src={query} width="50px" height="50px" />
-            <HStack
-              backgroundColor="white"
-              boxShadow="0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
-              borderRadius="13px"
-              padding="10px"
-              width="30vw"
+            <Text
+              variant="benefits_green"
+              onClick={() => setSideImage(hospital4)}
+              onMouseOver={() => setSideImage(hospital4)}
             >
-              <Text>Отсутствие очередей и предварительная запись на прием</Text>
-            </HStack>
+              Современная операционная и стационар
+            </Text>
           </HStack>
           <HStack>
-            <Image src={city} width="50px" height="50px" />
-            <HStack
-              backgroundColor="white"
-              boxShadow="0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
-              borderRadius="13px"
-              padding="10px"
-              width="30vw"
+            <Text
+              variant="benefits_green"
+              onClick={() => setSideImage(hospital5)}
+              onMouseOver={() => setSideImage(hospital5)}
             >
-              <Text>Удобное расположение в центре города</Text>
-            </HStack>
+              Современное оборудование от ведущих мировых производителей
+            </Text>
           </HStack>
           <HStack>
-            <Image src={city} width="50px" height="50px" />
-            <HStack
-              backgroundColor="white"
-              boxShadow="0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
-              borderRadius="13px"
-              padding="10px"
-              width="30vw"
+            <Text
+              variant="benefits_green"
+              onClick={() => setSideImage(hospital6)}
+              onMouseOver={() => setSideImage(hospital6)}
             >
-              <Text>Современная операционная и стационар</Text>
-            </HStack>
-          </HStack>
-        </VStack>
-        <VStack>
-          <HStack>
-            <Image src={medics} width="50px" height="50px" />
-            <HStack
-              backgroundColor="white"
-              boxShadow="0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
-              borderRadius="13px"
-              padding="10px"
-              width="30vw"
-            >
-              <Text>
-                Современное оборудование от ведущих мировых производителей
-              </Text>
-            </HStack>
+              Высококвалфицированный медицинский персонал
+            </Text>
           </HStack>
           <HStack>
-            <Image src={medics} width="50px" height="50px" />
-            <HStack
-              backgroundColor="white"
-              boxShadow="0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
-              borderRadius="13px"
-              padding="10px"
-              width="30vw"
+            <Text
+              variant="benefits_green"
+              onClick={() => setSideImage(hospital1)}
+              onMouseOver={() => setSideImage(hospital1)}
             >
-              <Text>Постоянное обучение и развитие специалистов</Text>
-            </HStack>
-          </HStack>
-          <HStack>
-            <Image src={medics} width="50px" height="50px" />
-            <HStack
-              backgroundColor="white"
-              boxShadow="0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
-              borderRadius="13px"
-              padding="10px"
-              width="30vw"
-            >
-              <Text>Уютная атмосфера</Text>
-            </HStack>
-          </HStack>
-          <HStack>
-            <Image src={medics} width="50px" height="50px" />
-            <HStack
-              backgroundColor="white"
-              boxShadow="0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
-              borderRadius="13px"
-              padding="10px"
-              width="30vw"
-            >
-              <Text>Высокий уровень обслуживания</Text>
-            </HStack>
-          </HStack>
-          <HStack>
-            <Image src={medics} width="50px" height="50px" />
-            <HStack
-              backgroundColor="white"
-              boxShadow="0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
-              borderRadius="13px"
-              padding="10px"
-              width="30vw"
-            >
-              <Text>Высокий уровень обслуживания</Text>
-            </HStack>
+              Отсутствие очередей и предварительная запись на приём
+            </Text>
           </HStack>
         </VStack>
-      </HStack>
+        <Image
+          src={side_image}
+          borderRadius={"31px"}
+          width={width <= 768 ? "100%" : "40vw"}
+          // height={width <= 768 ? "auto" : "60vh"}
+          style={{
+            borderRadius: "31px",
+            width: "40vw",
+            height: "60vh",
+            objectFit: "fill",
+          }}
+        />
+      </Stack>
     </VStack>
   );
 };
