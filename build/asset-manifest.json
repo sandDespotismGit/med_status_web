@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.e6c13ad2.css",
-    "main.js": "./static/js/main.2c8a5c39.js",
+    "main.js": "./static/js/main.68ec30f4.js",
     "static/media/action.jpg": "./static/media/action.239d3c151d81912710d4.jpg",
     "static/media/hospital4.webp": "./static/media/hospital4.770f03ecd1375d62163a.webp",
     "static/media/hospital1.webp": "./static/media/hospital1.0cfb0eccbe668e11986e.webp",
@@ -23,18 +23,25 @@
     "static/media/yandex.png": "./static/media/yandex.db5705eaf3a6776926aa.png",
     "static/media/back.png": "./static/media/back.9e92245af52f664ebbfe.png",
     "static/media/ginecolog.svg": "./static/media/ginecolog.580833b64b2ebe40e568a1869c02f230.svg",
+    "static/media/uzi.svg": "./static/media/uzi.2ea8e110e001fe4484326c7f54670013.svg",
+    "static/media/endo.svg": "./static/media/endo.1584a75d6b68ff6a4feb6c5d418078c2.svg",
     "static/media/white.jpg": "./static/media/white.2ce07c3bf2f0455d5cf2.jpg",
-    "static/media/cosmetolog.png": "./static/media/cosmetolog.edfefbc5b26e420979fb.png",
+    "static/media/urolog.svg": "./static/media/urolog.5751da930e031076440abf086f5fa7c6.svg",
+    "static/media/pediatr.svg": "./static/media/pediatr.52006b3b486f5584622a54824e397c23.svg",
+    "static/media/check-up.svg": "./static/media/check-up.5791a6a1718cbc615b363e2d335d3782.svg",
     "static/media/analys.svg": "./static/media/analys.5df971ce934b128b7dec9080d81ee0c3.svg",
+    "static/media/chirurg.svg": "./static/media/chirurg.6607ff24bf16da6ee4d4806ca3b68f37.svg",
     "static/media/cardio.svg": "./static/media/cardio.d74bf1f1fa075cae24b6d3355c43a4c3.svg",
+    "static/media/iv-1.svg": "./static/media/iv-1.8a5c365265ba017b052d8a52c14240ad.svg",
+    "static/media/neuro.svg": "./static/media/neuro.f3d144b3f36d6fb9a54a3fe234ff9a97.svg",
     "static/media/terapy.svg": "./static/media/terapy.551468292c239bc0af59480837315d7c.svg",
     "index.html": "./index.html",
     "static/media/shadowlogo.svg": "./static/media/shadowlogo.368b9d11e5cfacaab3494a8b1d76f590.svg",
     "main.e6c13ad2.css.map": "./static/css/main.e6c13ad2.css.map",
-    "main.2c8a5c39.js.map": "./static/js/main.2c8a5c39.js.map"
+    "main.68ec30f4.js.map": "./static/js/main.68ec30f4.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.2c8a5c39.js"
+    "static/js/main.68ec30f4.js"
   ]
 }

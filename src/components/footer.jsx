@@ -37,25 +37,25 @@ const Footer = () => {
           width="25%"
         >
           <GridItem>
-            <Link to='/cardio' >О нас</Link>
+            <Link to='/#' >О нас</Link>
           </GridItem>
           <GridItem>
-          <Link to='/cardio' >Направления</Link>
+          <Link to='/#' >Направления</Link>
           </GridItem>
           <GridItem>
-          <Link to='/cardio' >Врачи</Link>
+          <Link to='/#' >Врачи</Link>
           </GridItem>
           <GridItem>
-          <Link to='/cardio' >Цены</Link>
+          <Link to='/#' >Цены</Link>
           </GridItem>
           <GridItem>
-          <Link to='/cardio' >Отзывы</Link>
+          <Link to='/#' >Отзывы</Link>
           </GridItem>
           <GridItem>
-          <Link to='/cardio' >Контакты</Link>
+          <Link to='/#' >Контакты</Link>
           </GridItem>
           <GridItem>
-          <Link to='/cardio' >Документы</Link>
+          <Link to='/#' >Документы</Link>
           </GridItem>
         </Grid>
         <VStack

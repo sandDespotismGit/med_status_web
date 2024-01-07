@@ -29,7 +29,7 @@ const Header = () => {
         justify="space-between"
       >
         <HStack spacing="20px" align="center">
-          <Image src={logo} height="60px" />
+          <Link to='/#' ><Image src={logo} height="60px" /></Link>
           <VStack align="flex-start">
             <Text fontWeight={700}>пн-пт</Text>
             <Text>08:00-20:00</Text>
