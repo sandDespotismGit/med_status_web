@@ -67,10 +67,9 @@ const Footer = () => {
             Мы в соцсетях
           </Text>
           <HStack>
+          <Link to="https://vk.com/id783380624">
             <Image src={vk} />
-            <Image src={ok} />
-            <Image src={youtube} />
-            <Image src={vk} />
+          </Link>
             <Image src={whatsapp} />
             <Image src={telegram} />
           </HStack>
