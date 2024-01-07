@@ -6,7 +6,7 @@ import scooters from "./../images/action.jpg";
 const Carousel = () => {
   return (
     <VStack
-      width="100%"
+      width="80%"
       backgroundImage={scooters}
       padding="50px"
       backgroundSize='contain'
