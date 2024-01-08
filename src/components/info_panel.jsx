@@ -29,9 +29,9 @@ const InfoPanel = () => {
   return (
     <Grid
       templateColumns={width <= 512 ? " repeat(2, 2fr)" : " repeat(4, 2fr)"}
-      gap={["15px", "22px", "24px", "25px", "40px"]}
+      gap={["35px", "42px", "44px", "45px", "60px"]}
       marginTop="30px"
-      width="70%"
+      width="80%"
     >
       <GridItem>
         <VStack
@@ -55,11 +55,12 @@ const InfoPanel = () => {
             </Text>
             <Link href="#/ginekolog" color="#15AD92" zIndex={5}>
               Подробнее
+              <HStack width={"120%"} justify={"end"}>
+            < Image src={ginecolog} width="60%" />
+            </HStack>
             </Link>
           </VStack>
-          <HStack width={"100%"} justify={"right"}>
-            <Image src={ginecolog} width="30%" />
-          </HStack>
+          
         </VStack>
       </GridItem>
       <GridItem>
@@ -84,11 +85,12 @@ const InfoPanel = () => {
             </Text>
             <Link color="#15AD92" zIndex={5} href='#/cardio'>
               Подробнее
+              <HStack width={"120%"} justify={"end"}>
+            <Image src={cardiolog} width="60%" />
+          </HStack>
             </Link>
           </VStack>
-          <HStack width={"100%"} justify={"right"}>
-            <Image src={cardiolog} width="30%" />
-          </HStack>
+          
         </VStack>
       </GridItem>
       <GridItem>
@@ -113,11 +115,12 @@ const InfoPanel = () => {
             </Text>
             <Link href="#/terapy" color="#15AD92" zIndex={5}>
               Подробнее
+              <HStack width={"120%"} justify={"end"}>
+                <Image src={terapy} width="60%" />
+              </HStack>
             </Link>
           </VStack>
-          <HStack width={"100%"} justify={"right"}>
-            <Image src={terapy} width="30%" />
-          </HStack>
+          
         </VStack>
       </GridItem>
       <GridItem>
@@ -142,11 +145,12 @@ const InfoPanel = () => {
             </Text>
             <Link href="#/analys" color="#15AD92" zIndex={5}>
               Подробнее
+              <HStack width={"120%"} justify={"end"}>
+              <Image src={analysis} width="60%" />
+            </HStack>
             </Link>
           </VStack>
-          <HStack width={"100%"} justify={"right"}>
-            <Image src={analysis} width="30%" />
-          </HStack>
+          
         </VStack>
       </GridItem>
       
@@ -172,11 +176,12 @@ const InfoPanel = () => {
             </Text>
             <Link href="#/iv" color="#15AD92" zIndex={5}>
               Подробнее
+              <HStack width={"120%"} justify={"end"}>
+              <Image src={iv} width="60%" />
+            </HStack>
             </Link>
           </VStack>
-          <HStack width={"100%"} justify={"right"}>
-            <Image src={iv} width="30%" />
-          </HStack>
+          
         </VStack>
       </GridItem>
       <GridItem>
@@ -201,11 +206,12 @@ const InfoPanel = () => {
             </Text>
             <Link href="#/checkup"color="#15AD92" zIndex={5}>
               Подробнее
+              <HStack width={"120%"} justify={"end"}>
+                <Image src={ckecku} width="60%" />
+              </HStack>
             </Link>
           </VStack>
-          <HStack width={"100%"} justify={"right"}>
-            <Image src={ckecku} width="30%" />
-          </HStack>
+          
         </VStack>
       </GridItem>
       <GridItem>
@@ -230,11 +236,12 @@ const InfoPanel = () => {
             </Text>
             <Link href="#/pediatr" color="#15AD92" zIndex={5}>
               Подробнее
+              <HStack width={"120%"} justify={"end"}>
+                <Image src={pediatr} width="60%" />
+            </HStack>
             </Link>
           </VStack>
-          <HStack width={"100%"} justify={"right"}>
-            <Image src={pediatr} width="30%" />
-          </HStack>
+          
         </VStack>
       </GridItem>
       <GridItem>
@@ -259,11 +266,12 @@ const InfoPanel = () => {
             </Text>
             <Link href="#/neuro" color="#15AD92" zIndex={5}>
               Подробнее
+              <HStack width={"120%"} justify={"end"}>
+                <Image src={neurolog} width="60%" />
+              </HStack>
             </Link>
           </VStack>
-          <HStack width={"100%"} justify={"right"}>
-            <Image src={neurolog} width="30%" />
-          </HStack>
+          
         </VStack>
       </GridItem>
       <GridItem>
@@ -288,11 +296,12 @@ const InfoPanel = () => {
             </Text>
             <Link href="#/uzi" color="#15AD92" zIndex={5}>
               Подробнее
+              <HStack width={"120%"} justify={"end"}>
+                <Image src={uzi} width="60%" />
+              </HStack>
             </Link>
           </VStack>
-          <HStack width={"100%"} justify={"right"}>
-            <Image src={uzi} width="30%" />
-          </HStack>
+          
         </VStack>
       </GridItem>
       <GridItem>
@@ -317,11 +326,12 @@ const InfoPanel = () => {
             </Text>
             <Link href="#/hirurgia"color="#15AD92" zIndex={5}>
               Подробнее
+              <HStack width={"100%"} justify={"end"}>
+                <Image src={hirurg} width="60%" />
+              </HStack>
             </Link>
           </VStack>
-          <HStack width={"100%"} justify={"right"}>
-            <Image src={hirurg} width="30%" />
-          </HStack>
+          
         </VStack>
       </GridItem>
       <GridItem>
@@ -346,11 +356,11 @@ const InfoPanel = () => {
             </Text>
             <Link href="#/uro" color="#15AD92" zIndex={5}>
               Подробнее
+              <HStack width={"120%"} justify={"end"}>
+                <Image src={urolog} width="60%" />
+              </HStack>
             </Link>
           </VStack>
-          <HStack width={"100%"} justify={"right"}>
-            <Image src={urolog} width="30%" />
-          </HStack>
         </VStack>
       </GridItem>
       <GridItem>
@@ -375,11 +385,12 @@ const InfoPanel = () => {
             </Text>
             <Link href="#/endo"color="#15AD92" zIndex={5}>
               Подробнее
+            <HStack width={"120%"} justify={"end"}>
+              <Image src={endo} width="60%" />
+            </HStack>
             </Link>
           </VStack>
-          <HStack width={"100%"} justify={"right"}>
-            <Image src={endo} width="30%" />
-          </HStack>
+          
         </VStack>
       </GridItem>
     </Grid>
