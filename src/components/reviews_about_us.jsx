@@ -8,9 +8,9 @@ const ReviewsAboutUs = () => {
       <Heading size="lg" marginBottom="30px" color="#085D65">
         Отзывы
       </Heading>
-      <HStack width="100%">
+      <HStack width="100%" justify={'space-between'}>
         <VStack>
-          <Image src={prodocs} />
+          <Image src={prodocs} width={'200px'} />
           <HStack
             borderRadius="20px"
             boxShadow="0px 2px 40px 0px rgba(0, 0, 0, 0.25)"
@@ -23,7 +23,7 @@ const ReviewsAboutUs = () => {
           </HStack>
         </VStack>
         <VStack>
-          <Image src={google} />
+          <Image src={google} width={'200px'} />
           <HStack
             borderRadius="20px"
             boxShadow="0px 2px 40px 0px rgba(0, 0, 0, 0.25)"
@@ -36,7 +36,7 @@ const ReviewsAboutUs = () => {
           </HStack>
         </VStack>
         <VStack>
-          <Image src={yandex} />
+          <Image src={yandex} width={'200px'} />
           <HStack
             borderRadius="20px"
             boxShadow="0px 2px 40px 0px rgba(0, 0, 0, 0.25)"

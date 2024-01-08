@@ -60,7 +60,7 @@ const Reviews = () => {
         Отзывы
       </Heading>
       <HStack justify="space-between">
-        <Carousel slidesToShow={2} cellAlign="center" cellSpacing={100}>
+        <Carousel slidesToShow={2} cellAlign="center" cellSpacing={100} withoutControls={true}>
           {carousel}
         </Carousel>
       </HStack>

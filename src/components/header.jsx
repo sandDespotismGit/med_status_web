@@ -16,11 +16,12 @@ const Header = () => {
   return (
     <VStack
       align="center"
-      width="80%"
+      width="100%"
       color="#0B646C"
       backgroundColor="white"
       borderBottomRadius="15px"
       boxShadow="0px 7px 4px 0px rgba(0, 0, 0, 0.25)"
+
     >
       <HStack
         width="100%"

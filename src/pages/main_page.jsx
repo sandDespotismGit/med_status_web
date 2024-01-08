@@ -16,6 +16,7 @@ const MainPage = () => {
   const { width, height } = useWindowDimensions();
   return (
     <VStack width="100%" overflowX='hidden'>
+
       <VStack
         width="100%"
         paddingLeft={["10px", "15px", "30px", "45px", "225px"]}

@@ -19,12 +19,12 @@ const theme = extendTheme({
           },
         },
         benefits_green: {
-          padding: "25px",
+          padding: "15px",
           color: "#085D65",
           borderRadius: "13px",
           border: "1px solid transparent",
           textShadow: "0px 4px 40px rgba(0, 0, 0, 0.25)",
-          fontSize: ["14px", "16px", "16px", "18px", "20px"],
+          fontSize: ["14px", "14px", "14px", "15px", "16px"],
           fontWeight: "700",
           width: "100%",
           _hover: {

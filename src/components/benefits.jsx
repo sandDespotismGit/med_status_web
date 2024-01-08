@@ -11,7 +11,7 @@ const Benefits = () => {
   const [side_image, setSideImage] = useState(hospital1);
   const { width, height } = useWindowDimensions();
   return (
-    <VStack width="80%" spacing="25px">
+    <VStack width="100%" spacing="25px" height={'70vh'}>
       <Heading size="lg" color="#085D65">
         Наши преимущества
       </Heading>
@@ -89,7 +89,7 @@ const Benefits = () => {
         <Image
           src={side_image}
           borderRadius={"31px"}
-          width={width <= 768 ? "100%" : "40vw"}
+          width={width <= 768 ? "100%" : "60vw"}
           // height={width <= 768 ? "auto" : "60vh"}
           style={{
             borderRadius: "31px",
