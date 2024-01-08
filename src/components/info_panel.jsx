@@ -83,12 +83,14 @@ const InfoPanel = () => {
             <Text zIndex={5} fontWeight={700} color={"#138B96"}>
               Кардиология
             </Text>
-            <Link color="#15AD92" zIndex={5} href='#/cardio'>
-              Подробнее
-              <HStack width={"120%"} justify={"end"}>
-            <Image src={cardiolog} width="60%" />
-          </HStack>
+            
+            <HStack width={"85%"}>
+              <Link color="#15AD92" zIndex={5} href='#/cardio'>
+                Подробнее
+                <Image src={cardiolog} width={"100%"} />
             </Link>
+          </HStack>
+            
           </VStack>
           
         </VStack>

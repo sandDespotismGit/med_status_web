@@ -9,7 +9,6 @@ const Carousel = () => {
       width="80%"
       backgroundSize='contain'
       borderRadius="5px"
-      boxShadow="0px 7px 4px 0px rgba(0, 0, 0, 0.25)"
     >
       {/* <VStack align="center" justify="space-between" spacing="30px">
         <Heading color="#085D65">Бесплатная вакцинация от гриппа</Heading>

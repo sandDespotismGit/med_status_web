@@ -6,7 +6,7 @@ const ReviewsAboutUs = () => {
   return (
     <VStack marginTop="30px" align="center" marginBottom="30px" width="100%">
       <Heading size="lg" marginBottom="30px" color="#085D65">
-        Отзывы
+        Отзывы о нас
       </Heading>
       <HStack width="100%" justify={'space-between'}>
         <VStack>
