@@ -22,6 +22,7 @@ import terapy from "./../images/terapy.svg";
 import analysis from "./../images/analys.svg";
 import endo from "./../images/endo.svg";
 import ckecku from "./../images/check-up.svg";
+import str from "./../images/str.svg";
 import shadowlogo from "./../images/shadowlogo.svg";
 import useWindowDimensions from "../hooks/window_dimensions";
 const InfoPanel = () => {
@@ -40,7 +41,7 @@ const InfoPanel = () => {
           background="#FFF"
           boxShadow="0px 2px 30px 0px rgba(0, 0, 0, 0.25)"
           spacing="15px"
-          align="flex-start"
+          align="stretch"
           padding="25px"
           position={"relative"}
           height={"100%"}
@@ -49,18 +50,19 @@ const InfoPanel = () => {
             src={shadowlogo}
             style={{ position: "absolute", top: "0px", left: "0px" }}
           />
-          <VStack align="flex-start">
-            <Text fontStyle='' zIndex={5} fontWeight={700} color={"#138B96"}>
-              Гинекология
-            </Text>
-            <Link href="#/ginekolog" color="#15AD92" zIndex={5}>
-              Подробнее
-              <HStack width={"120%"} justify={"end"}>
-            < Image src={ginecolog} width="60%" />
-            </HStack>
-            </Link>
-          </VStack>
-          
+          <Text zIndex={5} fontWeight={700} color={"#138B96"}>
+              Гинекология<br />
+              <Link color="#15AD92" zIndex={5} href='#/ginekolog'>
+              <HStack spacing="3px">
+                  <Text>Подробнее</Text>
+                  <Image src={str} width={"5%"} />
+                </HStack>
+                <HStack justify="right">
+                  <Image src={ginecolog} width={"30%"} />
+                </HStack>
+
+              </Link>
+          </Text>
         </VStack>
       </GridItem>
       <GridItem>
@@ -70,7 +72,7 @@ const InfoPanel = () => {
           background="#FFF"
           boxShadow="0px 2px 30px 0px rgba(0, 0, 0, 0.25)"
           spacing="15px"
-          align="flex-start"
+          align="stretch"
           padding="25px"
           position={"relative"}
           height={"100%"}
@@ -79,20 +81,20 @@ const InfoPanel = () => {
             src={shadowlogo}
             style={{ position: "absolute", top: "0px", left: "0px" }}
           />
-          <VStack align="flex-start">
             <Text zIndex={5} fontWeight={700} color={"#138B96"}>
-              Кардиология
-            </Text>
-            
-            <HStack width={"85%"}>
+              Кардиология<br />
               <Link color="#15AD92" zIndex={5} href='#/cardio'>
-                Подробнее
-                <Image src={cardiolog} width={"100%"} />
-            </Link>
-          </HStack>
-            
-          </VStack>
-          
+                <HStack spacing="3px">
+                  <Text>Подробнее</Text>
+                  <Image src={str} width={"5%"} />
+                </HStack>
+                
+                <HStack justify="right">
+                  <Image src={cardiolog} width={"50%"} />
+                </HStack>
+
+              </Link>
+            </Text>
         </VStack>
       </GridItem>
       <GridItem>
@@ -102,7 +104,7 @@ const InfoPanel = () => {
           background="#FFF"
           boxShadow="0px 2px 30px 0px rgba(0, 0, 0, 0.25)"
           spacing="15px"
-          align="flex-start"
+          align="stretch"
           padding="25px"
           position={"relative"}
           height={"100%"}
@@ -111,18 +113,19 @@ const InfoPanel = () => {
             src={shadowlogo}
             style={{ position: "absolute", top: "0px", left: "0px" }}
           />
-          <VStack align="flex-start">
             <Text zIndex={5} fontWeight={700} color={"#138B96"}>
-              Терапия
+              Терапия<br />
+              <Link color="#15AD92" zIndex={5} href='#/terapy'>
+              <HStack spacing="3px">
+                  <Text>Подробнее</Text>
+                  <Image src={str} width={"5%"} />
+                </HStack>
+                <HStack justify="right">
+                  <Image src={terapy} width={"50%"} />
+                </HStack>
+
+              </Link>
             </Text>
-            <Link href="#/terapy" color="#15AD92" zIndex={5}>
-              Подробнее
-              <HStack width={"120%"} justify={"end"}>
-                <Image src={terapy} width="60%" />
-              </HStack>
-            </Link>
-          </VStack>
-          
         </VStack>
       </GridItem>
       <GridItem>
@@ -132,7 +135,7 @@ const InfoPanel = () => {
           background="#FFF"
           boxShadow="0px 2px 30px 0px rgba(0, 0, 0, 0.25)"
           spacing="15px"
-          align="flex-start"
+          align="stretch"
           padding="25px"
           position={"relative"}
           height={"100%"}
@@ -141,18 +144,19 @@ const InfoPanel = () => {
             src={shadowlogo}
             style={{ position: "absolute", top: "0px", left: "0px" }}
           />
-          <VStack align="flex-start">
             <Text zIndex={5} fontWeight={700} color={"#138B96"}>
-              Анализы
+              Анализы<br />
+              <Link color="#15AD92" zIndex={5} href='#/analys'>
+              <HStack spacing="3px">
+                  <Text>Подробнее</Text>
+                  <Image src={str} width={"5%"} />
+                </HStack>
+                <HStack justify="right">
+                  <Image src={analysis} width={"50%"} />
+                </HStack>
+
+              </Link>
             </Text>
-            <Link href="#/analys" color="#15AD92" zIndex={5}>
-              Подробнее
-              <HStack width={"120%"} justify={"end"}>
-              <Image src={analysis} width="60%" />
-            </HStack>
-            </Link>
-          </VStack>
-          
         </VStack>
       </GridItem>
       
@@ -163,7 +167,7 @@ const InfoPanel = () => {
           background="#FFF"
           boxShadow="0px 2px 30px 0px rgba(0, 0, 0, 0.25)"
           spacing="15px"
-          align="flex-start"
+          align="stretch"
           padding="25px"
           position={"relative"}
           height={"100%"}
@@ -172,18 +176,19 @@ const InfoPanel = () => {
             src={shadowlogo}
             style={{ position: "absolute", top: "0px", left: "0px" }}
           />
-          <VStack align="flex-start">
             <Text zIndex={5} fontWeight={700} color={"#138B96"}>
-              IV-терапия
+              IV-терапия<br />
+              <Link color="#15AD92" zIndex={5} href='#/iv'>
+              <HStack spacing="3px">
+                  <Text>Подробнее</Text>
+                  <Image src={str} width={"5%"} />
+                </HStack>
+                <HStack justify="right">
+                  <Image src={iv} width={"50%"} />
+                </HStack>
+
+              </Link>
             </Text>
-            <Link href="#/iv" color="#15AD92" zIndex={5}>
-              Подробнее
-              <HStack width={"120%"} justify={"end"}>
-              <Image src={iv} width="60%" />
-            </HStack>
-            </Link>
-          </VStack>
-          
         </VStack>
       </GridItem>
       <GridItem>
@@ -193,7 +198,7 @@ const InfoPanel = () => {
           background="#FFF"
           boxShadow="0px 2px 30px 0px rgba(0, 0, 0, 0.25)"
           spacing="15px"
-          align="flex-start"
+          align="stretch"
           padding="25px"
           position={"relative"}
           height={"100%"}
@@ -202,18 +207,19 @@ const InfoPanel = () => {
             src={shadowlogo}
             style={{ position: "absolute", top: "0px", left: "0px" }}
           />
-          <VStack align="flex-start">
             <Text zIndex={5} fontWeight={700} color={"#138B96"}>
-              Check-Up
+              Check-Up<br />
+              <Link color="#15AD92" zIndex={5} href='#/checkup'>
+              <HStack spacing="3px">
+                  <Text>Подробнее</Text>
+                  <Image src={str} width={"5%"} />
+                </HStack>
+                <HStack justify="right">
+                  <Image src={ckecku} width={"50%"} />
+                </HStack>
+
+              </Link>
             </Text>
-            <Link href="#/checkup"color="#15AD92" zIndex={5}>
-              Подробнее
-              <HStack width={"120%"} justify={"end"}>
-                <Image src={ckecku} width="60%" />
-              </HStack>
-            </Link>
-          </VStack>
-          
         </VStack>
       </GridItem>
       <GridItem>
@@ -223,7 +229,7 @@ const InfoPanel = () => {
           background="#FFF"
           boxShadow="0px 2px 30px 0px rgba(0, 0, 0, 0.25)"
           spacing="15px"
-          align="flex-start"
+          align="stretch"
           padding="25px"
           position={"relative"}
           height={"100%"}
@@ -232,18 +238,19 @@ const InfoPanel = () => {
             src={shadowlogo}
             style={{ position: "absolute", top: "0px", left: "0px" }}
           />
-          <VStack align="flex-start">
             <Text zIndex={5} fontWeight={700} color={"#138B96"}>
-              Педиатрия
+              Педиатрия<br />
+              <Link color="#15AD92" zIndex={5} href='#/pediatr'>
+              <HStack spacing="3px">
+                  <Text>Подробнее</Text>
+                  <Image src={str} width={"5%"} />
+                </HStack>
+                <HStack justify="right">
+                  <Image src={pediatr} width={"50%"} />
+                </HStack>
+
+              </Link>
             </Text>
-            <Link href="#/pediatr" color="#15AD92" zIndex={5}>
-              Подробнее
-              <HStack width={"120%"} justify={"end"}>
-                <Image src={pediatr} width="60%" />
-            </HStack>
-            </Link>
-          </VStack>
-          
         </VStack>
       </GridItem>
       <GridItem>
@@ -253,7 +260,7 @@ const InfoPanel = () => {
           background="#FFF"
           boxShadow="0px 2px 30px 0px rgba(0, 0, 0, 0.25)"
           spacing="15px"
-          align="flex-start"
+          align="stretch"
           padding="25px"
           position={"relative"}
           height={"100%"}
@@ -262,18 +269,19 @@ const InfoPanel = () => {
             src={shadowlogo}
             style={{ position: "absolute", top: "0px", left: "0px" }}
           />
-          <VStack align="flex-start">
             <Text zIndex={5} fontWeight={700} color={"#138B96"}>
-              Неврология
+              Неврология<br />
+              <Link color="#15AD92" zIndex={5} href='#/neuro'>
+              <HStack spacing="3px">
+                  <Text>Подробнее</Text>
+                  <Image src={str} width={"5%"} />
+                </HStack>
+                <HStack justify="right">
+                  <Image src={neurolog} width={"50%"} />
+                </HStack>
+
+              </Link>
             </Text>
-            <Link href="#/neuro" color="#15AD92" zIndex={5}>
-              Подробнее
-              <HStack width={"120%"} justify={"end"}>
-                <Image src={neurolog} width="60%" />
-              </HStack>
-            </Link>
-          </VStack>
-          
         </VStack>
       </GridItem>
       <GridItem>
@@ -283,7 +291,7 @@ const InfoPanel = () => {
           background="#FFF"
           boxShadow="0px 2px 30px 0px rgba(0, 0, 0, 0.25)"
           spacing="15px"
-          align="flex-start"
+          align="stretch"
           padding="25px"
           position={"relative"}
           height={"100%"}
@@ -292,18 +300,19 @@ const InfoPanel = () => {
             src={shadowlogo}
             style={{ position: "absolute", top: "0px", left: "0px" }}
           />
-          <VStack align="flex-start">
             <Text zIndex={5} fontWeight={700} color={"#138B96"}>
-              УЗИ
+              УЗИ<br />
+              <Link color="#15AD92" zIndex={5} href='#/uzi'>
+              <HStack spacing="3px">
+                  <Text>Подробнее</Text>
+                  <Image src={str} width={"5%"} />
+                </HStack>
+                <HStack justify="right">
+                  <Image src={uzi} width={"50%"} />
+                </HStack>
+
+              </Link>
             </Text>
-            <Link href="#/uzi" color="#15AD92" zIndex={5}>
-              Подробнее
-              <HStack width={"120%"} justify={"end"}>
-                <Image src={uzi} width="60%" />
-              </HStack>
-            </Link>
-          </VStack>
-          
         </VStack>
       </GridItem>
       <GridItem>
@@ -313,7 +322,7 @@ const InfoPanel = () => {
           background="#FFF"
           boxShadow="0px 2px 30px 0px rgba(0, 0, 0, 0.25)"
           spacing="15px"
-          align="flex-start"
+          align="stretch"
           padding="25px"
           position={"relative"}
           height={"100%"}
@@ -322,18 +331,19 @@ const InfoPanel = () => {
             src={shadowlogo}
             style={{ position: "absolute", top: "0px", left: "0px" }}
           />
-          <VStack align="flex-start">
             <Text zIndex={5} fontWeight={700} color={"#138B96"}>
-              Хирургия
+              Хирургия<br />
+              <Link color="#15AD92" zIndex={5} href='#/hirurgia'>
+              <HStack spacing="3px">
+                  <Text>Подробнее</Text>
+                  <Image src={str} width={"5%"} />
+                </HStack>
+                <HStack justify="right">
+                  <Image src={hirurg} width={"50%"} />
+                </HStack>
+
+              </Link>
             </Text>
-            <Link href="#/hirurgia"color="#15AD92" zIndex={5}>
-              Подробнее
-              <HStack width={"100%"} justify={"end"}>
-                <Image src={hirurg} width="60%" />
-              </HStack>
-            </Link>
-          </VStack>
-          
         </VStack>
       </GridItem>
       <GridItem>
@@ -343,7 +353,7 @@ const InfoPanel = () => {
           background="#FFF"
           boxShadow="0px 2px 30px 0px rgba(0, 0, 0, 0.25)"
           spacing="15px"
-          align="flex-start"
+          align="stretch"
           padding="25px"
           position={"relative"}
           height={"100%"}
@@ -352,17 +362,19 @@ const InfoPanel = () => {
             src={shadowlogo}
             style={{ position: "absolute", top: "0px", left: "0px" }}
           />
-          <VStack align="flex-start">
             <Text zIndex={5} fontWeight={700} color={"#138B96"}>
-              Урология
+              Урология<br />
+              <Link color="#15AD92" zIndex={5} href='#/uro'>
+              <HStack spacing="3px">
+                  <Text>Подробнее</Text>
+                  <Image src={str} width={"5%"} />
+                </HStack>
+                <HStack justify="right">
+                  <Image src={urolog} width={"60%"} />
+                </HStack>
+
+              </Link>
             </Text>
-            <Link href="#/uro" color="#15AD92" zIndex={5}>
-              Подробнее
-              <HStack width={"120%"} justify={"end"}>
-                <Image src={urolog} width="60%" />
-              </HStack>
-            </Link>
-          </VStack>
         </VStack>
       </GridItem>
       <GridItem>
@@ -372,7 +384,7 @@ const InfoPanel = () => {
           background="#FFF"
           boxShadow="0px 2px 30px 0px rgba(0, 0, 0, 0.25)"
           spacing="15px"
-          align="flex-start"
+          align="stretch"
           padding="25px"
           position={"relative"}
           height={"100%"}
@@ -381,18 +393,19 @@ const InfoPanel = () => {
             src={shadowlogo}
             style={{ position: "absolute", top: "0px", left: "0px" }}
           />
-          <VStack align="flex-start">
             <Text zIndex={5} fontWeight={700} color={"#138B96"}>
-              Эндокринология
+              Эндокринология<br />
+              <Link color="#15AD92" zIndex={5} href='#/endo'>
+              <HStack spacing="3px">
+                  <Text>Подробнее</Text>
+                  <Image src={str} width={"5%"} />
+                </HStack>
+                <HStack justify="right">
+                  <Image src={endo} width={"50%"} />
+                </HStack>
+
+              </Link>
             </Text>
-            <Link href="#/endo"color="#15AD92" zIndex={5}>
-              Подробнее
-            <HStack width={"120%"} justify={"end"}>
-              <Image src={endo} width="60%" />
-            </HStack>
-            </Link>
-          </VStack>
-          
         </VStack>
       </GridItem>
     </Grid>
