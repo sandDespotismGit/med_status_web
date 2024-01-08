@@ -30,9 +30,8 @@ const MainPage = () => {
           <Heading size="lg" color="#085D65">
             Наши направления
           </Heading>
-          <Text>
-            У нас вы найдете все услуги, необходимые для поддержания здоровья
-            вашей семьи
+          <Text color="#7E7E7E">
+            Мы - многопрофильная клиника, осуществляем комплексное лечение
           </Text>
         </VStack>
         <InfoPanel />
@@ -40,7 +39,7 @@ const MainPage = () => {
           <Heading size="lg" color="#085D65">
             Наши врачи
           </Heading>
-          <Text>С вами рядом будут высококвалифицированные специалисты</Text>
+          <Text color="#7E7E7E">С вами рядом будут высококвалифицированные специалисты</Text>
         </VStack>
         <OurDocs />
         {/* <VStack align="center" marginTop="30px" marginBottom="30px">

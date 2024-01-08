@@ -19,7 +19,7 @@ const OurDocs = () => {
             <VStack
               backgroundColor="white"
               borderRadius="23px"
-              boxShadow="0px 7px 4px 3px rgba(0, 0, 0, 0.25);"
+              boxShadow="0px 7px 15px 0px rgba(0, 0, 0, 0.25)"
               padding="15px"
               textAlign="left"
               align="flex-start"
@@ -38,7 +38,7 @@ const OurDocs = () => {
                 style={{ height: "350px", objectFit:'contain'}}
               />
               <Text fontWeight={700}>{elem.attributes.name}</Text>
-              <Text color="#89CECA">{elem.attributes.profession}</Text>
+              <Text color="#428480">{elem.attributes.profession}</Text>
               <HStack width="100%" justify="space-between">
                 <Text fontSize="14px">{elem.attributes.experience}</Text>
                 <Text fontSize="14px">
