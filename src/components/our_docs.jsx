@@ -10,7 +10,7 @@ const OurDocs = () => {
   const [carousel, setCarousel] = useState(null);
   const [slides, setSlides] = useState(null);
   useEffect(() => {
-    fetch("http://95.214.62.189:1337/api/doctors?populate=deep")
+    fetch("https://admin.xn--73-6kcpe5bybbhbl.xn--p1ai/api/doctors?populate=deep")
       .then((response) => response.json())
       .then(function (commits) {
         let data = commits.data;
@@ -32,7 +32,7 @@ const OurDocs = () => {
               <img
                 src={
                   elem.attributes.photo.data != null
-                    ? "http://95.214.62.189:1337" +
+                    ? "https://admin.xn--73-6kcpe5bybbhbl.xn--p1ai/" +
                     elem.attributes.photo.data.attributes.url
                     : null
                 }
