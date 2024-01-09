@@ -5,6 +5,7 @@ import white from './../images/white.jpg'
 import Carousel from "nuka-carousel";
 import { useState } from "react";
 import { useEffect } from "react";
+import { Element} from 'react-scroll';
 const OurDocs = () => {
   const [carousel, setCarousel] = useState(null);
   const [slides, setSlides] = useState(null);
@@ -35,7 +36,7 @@ const OurDocs = () => {
                     elem.attributes.photo.data.attributes.url
                     : null
                 }
-                style={{ height: "350px", objectFit:'contain'}}
+                style={{ height: "350px", objectFit:'contain', 'pointer-events': 'none'}}
               />
               <Text fontWeight={700}>{elem.attributes.name}</Text>
               <Text color="#428480">{elem.attributes.profession}</Text>
@@ -153,6 +154,7 @@ const OurDocs = () => {
           </Button>
         </VStack> */}
       </Carousel>
+      <Element id="about_us" className="element" />
     </HStack>
   );
 };

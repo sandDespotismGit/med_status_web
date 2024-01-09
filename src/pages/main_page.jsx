@@ -11,12 +11,52 @@ import Licenses from "../components/licenses";
 import Footer from "../components/footer";
 import ReviewsAboutUs from "../components/reviews_about_us";
 import useWindowDimensions from "../hooks/window_dimensions";
-import { Heading, VStack, Text, Button } from "@chakra-ui/react";
+import { Heading, VStack, Text, Button, Box } from "@chakra-ui/react";
+import React, { useEffect, useState } from 'react';
+import { ArrowUpIcon } from '@chakra-ui/icons';
 const MainPage = () => {
   const { width, height } = useWindowDimensions();
+  const [isVisible, setIsVisible] = useState(false);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 800) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
+
   return (
     <VStack width="100%" overflowX='hidden'>
-
+      {isVisible && (
+        <Box
+          onClick={scrollToTop}
+          position='fixed'
+          bottom='20px'
+          right={['16px', '84px']}
+          zIndex={3}>
+          <Button
+            size={'sm'}
+            rightIcon={<ArrowUpIcon />}
+            colorScheme='green'
+            variant='solid'>
+            Наверх
+          </Button>
+        </Box>
+      )}
       <VStack
         width="100%"
         paddingLeft={["10px", "15px", "30px", "45px", "225px"]}

@@ -7,12 +7,14 @@ import hospital5 from "./../images/hospital5.webp";
 import hospital6 from "./../images/hospital6.webp";
 import useWindowDimensions from "../hooks/window_dimensions";
 import { useState } from "react";
+import { Element} from 'react-scroll';
+
 const Benefits = () => {
   const [side_image, setSideImage] = useState(hospital1);
   const { width, height } = useWindowDimensions();
   return (
     <VStack width="100%" spacing="25px" height={'70vh'}>
-      <Heading size="lg" color="#085D65">
+      <Heading marginTop={"25px"} size="lg" color="#085D65">
         Наши преимущества
       </Heading>
       <Stack
@@ -99,6 +101,7 @@ const Benefits = () => {
           }}
         />
       </Stack>
+      <Element id="review" className="element"/>
     </VStack>
   );
 };

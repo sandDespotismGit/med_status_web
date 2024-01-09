@@ -2,6 +2,7 @@ import { HStack, VStack, Image, Text, Heading, Button } from "@chakra-ui/react";
 
 import scooters from "./../images/scooters.jpg";
 import checkin from "./../images/checkin.png";
+import { Element} from 'react-scroll';
 
 const Checkin = () => {
   return (
@@ -15,7 +16,9 @@ const Checkin = () => {
         </Button>
       </VStack>
       <Image src={checkin} />
+      <Element id="lic" className="element" />
     </HStack>
+
   );
 };
 export default Checkin;

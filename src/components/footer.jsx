@@ -16,9 +16,10 @@ import vk from "./../images/vk.png";
 import ok from "./../images/ok.png";
 import youtube from "./../images/youtube.png";
 import whatsapp from "./../images/whatsapp.png";
-import { Link } from "react-router-dom";
+import { Link as LinkReact } from "react-router-dom";
 import telegram from "./../images/telegram.png";
 import { useNavigate } from "react-router";
+import { Link, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -37,25 +38,79 @@ const Footer = () => {
           width="25%"
         >
           <GridItem>
-            <Link to='/#' >О нас</Link>
+          <Link 
+              activeClass="active" 
+              to="about_us" 
+              spy={true} 
+              smooth={true} 
+              offset={50} 
+              duration={500} 
+            >
+              О нас
+          </Link>
           </GridItem>
           <GridItem>
-          <Link to='/#' >Направления</Link>
+          <Link 
+          activeClass="active" 
+          to="info_panel" 
+          spy={true} 
+          smooth={true} 
+          offset={50} 
+          duration={500} 
+        >
+         Направления
+        </Link>
           </GridItem>
           <GridItem>
-          <Link to='/#' >Врачи</Link>
+          <Link 
+          activeClass="active" 
+          to="docs" 
+          spy={true} 
+          smooth={true} 
+          offset={50} 
+          duration={500} 
+        >
+         Врачи
+        </Link>
           </GridItem>
           <GridItem>
-          <Link to='/#' >Цены</Link>
+          <LinkReact to='/#' >Цены</LinkReact>
           </GridItem>
           <GridItem>
-          <Link to='/#' >Отзывы</Link>
+          <Link 
+          activeClass="active" 
+          to="review" 
+          spy={true} 
+          smooth={true} 
+          offset={50} 
+          duration={500} 
+        >
+         Отзывы
+        </Link>
           </GridItem>
           <GridItem>
-          <Link to='/#' >Контакты</Link>
+          <Link 
+          activeClass="active" 
+          to="contacts" 
+          spy={true} 
+          smooth={true} 
+          offset={50} 
+          duration={500} 
+        >
+          Контакты
+        </Link>
           </GridItem>
           <GridItem>
-          <Link to='/#' >Документы</Link>
+          <Link 
+          activeClass="active" 
+          to="lic" 
+          spy={true} 
+          smooth={true} 
+          offset={50} 
+          duration={500} 
+        >
+          Документация
+        </Link>
           </GridItem>
         </Grid>
         <VStack
@@ -67,9 +122,9 @@ const Footer = () => {
             Мы в соцсетях
           </Text>
           <HStack>
-          <Link to="https://vk.com/id783380624">
+          <LinkReact to="https://vk.com/id783380624">
             <Image src={vk} />
-          </Link>
+          </LinkReact>
             <Image src={whatsapp} />
             <Image src={telegram} />
           </HStack>

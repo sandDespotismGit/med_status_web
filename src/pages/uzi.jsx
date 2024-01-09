@@ -1,5 +1,5 @@
-import Header from "../components/header";
-import Footer from "../components/footer";
+import PageHeader from "../components/page_header";
+import PageFooter from "../components/pagefooter";
 import { Heading, VStack, Text, Button, Card, CardBody } from "@chakra-ui/react";
 const Uzi = () => {
   return (
@@ -10,7 +10,7 @@ const Uzi = () => {
       backgroundColor="#E7F1EE"
       spacing="30px"
     >
-      <Header />
+      <PageHeader />
       <Heading size="lg" color="#085D65">
         Кардиология
       </Heading>
@@ -48,7 +48,7 @@ const Uzi = () => {
           </Text>
         </CardBody>
       </Card>
-      <Footer />
+      <PageFooter />
     </VStack>
   );
 };

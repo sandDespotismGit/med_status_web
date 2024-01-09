@@ -1,6 +1,7 @@
 import { HStack, VStack, Image, Text, Heading } from "@chakra-ui/react";
 import { MdOutlineHealthAndSafety } from "react-icons/md";
 import clinics from "./../images/clicnics.png";
+import { Element} from 'react-scroll';
 
 const AboutUs = () => {
   return (

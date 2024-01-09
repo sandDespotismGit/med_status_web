@@ -8,8 +8,9 @@ import {
   HStack,
   VStack,
   Heading,
-  Link,
+  Link
 } from "@chakra-ui/react";
+import { useState } from 'react';
 import ginecolog from "./../images/ginecolog.svg";
 import urolog from "./../images/urolog.svg";
 import cardiolog from "./../images/cardio.svg";
@@ -25,8 +26,10 @@ import ckecku from "./../images/check-up.svg";
 import str from "./../images/str.svg";
 import shadowlogo from "./../images/shadowlogo.svg";
 import useWindowDimensions from "../hooks/window_dimensions";
+import { Element} from 'react-scroll';
 const InfoPanel = () => {
   const { width, height } = useWindowDimensions();
+  const [isShown, setIsShown] = useState(false);
   return (
     <Grid
       templateColumns={width <= 512 ? " repeat(2, 2fr)" : " repeat(4, 2fr)"}
@@ -52,9 +55,13 @@ const InfoPanel = () => {
           />
           <Text zIndex={5} fontWeight={700} color={"#138B96"}>
               Гинекология<br />
-              <Link color="#15AD92" zIndex={5} href='#/ginekolog'>
-              <HStack spacing="3px">
-                  <Text>Подробнее</Text>
+              <Link color="#15AD92" zIndex={5} href='#/ginekolog' style={{ textDecoration: 'none' }}>
+              <HStack 
+                spacing="3px"
+                onMouseEnter={() => setIsShown({"gin": true})}
+                onMouseLeave={() => setIsShown(false)}
+              >
+                  <Text color={isShown["gin"] && ("red")}>Подробнее</Text>
                   <Image src={str} width={"5%"} />
                 </HStack>
                 <HStack justify="right">
@@ -83,9 +90,11 @@ const InfoPanel = () => {
           />
             <Text zIndex={5} fontWeight={700} color={"#138B96"}>
               Кардиология<br />
-              <Link color="#15AD92" zIndex={5} href='#/cardio'>
-                <HStack spacing="3px">
-                  <Text>Подробнее</Text>
+              <Link color="#15AD92" zIndex={5} href='#/cardio' style={{ textDecoration: 'none' }}>
+                <HStack spacing="3px"
+                  onMouseEnter={() => setIsShown({"card": true})}
+                  onMouseLeave={() => setIsShown(false)}>
+                  <Text color={isShown["card"] && ("red")}>Подробнее</Text>
                   <Image src={str} width={"5%"} />
                 </HStack>
                 
@@ -115,9 +124,11 @@ const InfoPanel = () => {
           />
             <Text zIndex={5} fontWeight={700} color={"#138B96"}>
               Терапия<br />
-              <Link color="#15AD92" zIndex={5} href='#/terapy'>
-              <HStack spacing="3px">
-                  <Text>Подробнее</Text>
+              <Link color="#15AD92" zIndex={5} href='#/terapy' style={{ textDecoration: 'none' }}>
+              <HStack spacing="3px"
+                  onMouseEnter={() => setIsShown({"ter": true})}
+                  onMouseLeave={() => setIsShown(false)}>
+                  <Text color={isShown["ter"] && ("red")}>Подробнее</Text>
                   <Image src={str} width={"5%"} />
                 </HStack>
                 <HStack justify="right">
@@ -146,9 +157,11 @@ const InfoPanel = () => {
           />
             <Text zIndex={5} fontWeight={700} color={"#138B96"}>
               Анализы<br />
-              <Link color="#15AD92" zIndex={5} href='#/analys'>
-              <HStack spacing="3px">
-                  <Text>Подробнее</Text>
+              <Link color="#15AD92" zIndex={5} href='#/analys' style={{ textDecoration: 'none' }}>
+              <HStack spacing="3px"
+                  onMouseEnter={() => setIsShown({"ana": true})}
+                  onMouseLeave={() => setIsShown(false)}>
+                  <Text color={isShown["ana"] && ("red")}>Подробнее</Text>
                   <Image src={str} width={"5%"} />
                 </HStack>
                 <HStack justify="right">
@@ -178,9 +191,11 @@ const InfoPanel = () => {
           />
             <Text zIndex={5} fontWeight={700} color={"#138B96"}>
               IV-терапия<br />
-              <Link color="#15AD92" zIndex={5} href='#/iv'>
-              <HStack spacing="3px">
-                  <Text>Подробнее</Text>
+              <Link color="#15AD92" zIndex={5} href='#/iv' style={{ textDecoration: 'none' }}>
+              <HStack spacing="3px"
+                  onMouseEnter={() => setIsShown({"iv": true})}
+                  onMouseLeave={() => setIsShown(false)}>
+                  <Text color={isShown["iv"] && ("red")}>Подробнее</Text>
                   <Image src={str} width={"5%"} />
                 </HStack>
                 <HStack justify="right">
@@ -209,9 +224,10 @@ const InfoPanel = () => {
           />
             <Text zIndex={5} fontWeight={700} color={"#138B96"}>
               Check-Up<br />
-              <Link color="#15AD92" zIndex={5} href='#/checkup'>
-              <HStack spacing="3px">
-                  <Text>Подробнее</Text>
+              <Link color="#15AD92" zIndex={5} href='#/checkup' style={{ textDecoration: 'none' }}>
+              <HStack spacing="3px" onMouseEnter={() => setIsShown({"cu": true})}
+                  onMouseLeave={() => setIsShown(false)}>
+                  <Text color={isShown["cu"] && ("red")}>Подробнее</Text>
                   <Image src={str} width={"5%"} />
                 </HStack>
                 <HStack justify="right">
@@ -240,9 +256,10 @@ const InfoPanel = () => {
           />
             <Text zIndex={5} fontWeight={700} color={"#138B96"}>
               Педиатрия<br />
-              <Link color="#15AD92" zIndex={5} href='#/pediatr'>
-              <HStack spacing="3px">
-                  <Text>Подробнее</Text>
+              <Link color="#15AD92" zIndex={5} href='#/pediatr' style={{ textDecoration: 'none' }}>
+              <HStack spacing="3px" onMouseEnter={() => setIsShown({"pe": true})}
+                  onMouseLeave={() => setIsShown(false)}>
+                  <Text color={isShown["pe"] && ("red")}>Подробнее</Text>
                   <Image src={str} width={"5%"} />
                 </HStack>
                 <HStack justify="right">
@@ -271,9 +288,10 @@ const InfoPanel = () => {
           />
             <Text zIndex={5} fontWeight={700} color={"#138B96"}>
               Неврология<br />
-              <Link color="#15AD92" zIndex={5} href='#/neuro'>
-              <HStack spacing="3px">
-                  <Text>Подробнее</Text>
+              <Link color="#15AD92" zIndex={5} href='#/neuro' style={{ textDecoration: 'none' }}>
+              <HStack spacing="3px" onMouseEnter={() => setIsShown({"neu": true})}
+                  onMouseLeave={() => setIsShown(false)}>
+                  <Text color={isShown["neu"] && ("red")}>Подробнее</Text>
                   <Image src={str} width={"5%"} />
                 </HStack>
                 <HStack justify="right">
@@ -302,9 +320,10 @@ const InfoPanel = () => {
           />
             <Text zIndex={5} fontWeight={700} color={"#138B96"}>
               УЗИ<br />
-              <Link color="#15AD92" zIndex={5} href='#/uzi'>
-              <HStack spacing="3px">
-                  <Text>Подробнее</Text>
+              <Link color="#15AD92" zIndex={5} href='#/uzi' style={{ textDecoration: 'none' }}>
+              <HStack spacing="3px" onMouseEnter={() => setIsShown({"uzi": true})}
+                  onMouseLeave={() => setIsShown(false)}>
+                  <Text color={isShown["uzi"] && ("red")}>Подробнее</Text>
                   <Image src={str} width={"5%"} />
                 </HStack>
                 <HStack justify="right">
@@ -333,9 +352,10 @@ const InfoPanel = () => {
           />
             <Text zIndex={5} fontWeight={700} color={"#138B96"}>
               Хирургия<br />
-              <Link color="#15AD92" zIndex={5} href='#/hirurgia'>
-              <HStack spacing="3px">
-                  <Text>Подробнее</Text>
+              <Link color="#15AD92" zIndex={5} href='#/hirurgia' style={{ textDecoration: 'none' }}>
+              <HStack spacing="3px" onMouseEnter={() => setIsShown({"hir": true})}
+                  onMouseLeave={() => setIsShown(false)}>
+                  <Text color={isShown["hir"] && ("red")}>Подробнее</Text>
                   <Image src={str} width={"5%"} />
                 </HStack>
                 <HStack justify="right">
@@ -364,9 +384,10 @@ const InfoPanel = () => {
           />
             <Text zIndex={5} fontWeight={700} color={"#138B96"}>
               Урология<br />
-              <Link color="#15AD92" zIndex={5} href='#/uro'>
-              <HStack spacing="3px">
-                  <Text>Подробнее</Text>
+              <Link color="#15AD92" zIndex={5} href='#/uro' style={{ textDecoration: 'none' }}>
+              <HStack spacing="3px" onMouseEnter={() => setIsShown({"urol": true})}
+                  onMouseLeave={() => setIsShown(false)}>
+                  <Text color={isShown["urol"] && ("red")}>Подробнее</Text>
                   <Image src={str} width={"5%"} />
                 </HStack>
                 <HStack justify="right">
@@ -395,9 +416,10 @@ const InfoPanel = () => {
           />
             <Text zIndex={5} fontWeight={700} color={"#138B96"}>
               Эндокринология<br />
-              <Link color="#15AD92" zIndex={5} href='#/endo'>
-              <HStack spacing="3px">
-                  <Text>Подробнее</Text>
+              <Link color="#15AD92" zIndex={5} href='#/endo' style={{ textDecoration: 'none' }}>
+              <HStack spacing="3px" onMouseEnter={() => setIsShown({"endo": true})}
+                  onMouseLeave={() => setIsShown(false)}>
+                  <Text color={isShown["endo"] && ("red")}>Подробнее</Text>
                   <Image src={str} width={"5%"} />
                 </HStack>
                 <HStack justify="right">
@@ -408,6 +430,7 @@ const InfoPanel = () => {
             </Text>
         </VStack>
       </GridItem>
+      <Element id="docs" className="element"/>
     </Grid>
   );
 };
