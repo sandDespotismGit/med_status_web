@@ -1,7 +1,4 @@
 import { HStack, VStack, Heading, Image } from "@chakra-ui/react";
-
-import license1 from "./../images/license1.png";
-import license2 from "./../images/license2.png";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -27,8 +24,8 @@ const Licenses = () => {
         Лицензии
       </Heading>
       <HStack justify="space-around" width='30%' spacing={"100px"}>
-        <Image src={license1} />
-        <Image src={license2} />
+        <Image  />
+        <Image  />
       </HStack>
     </VStack>
   );

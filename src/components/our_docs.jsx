@@ -168,7 +168,6 @@ const OurDocs = () => {
           </Button>
         </VStack> */}
       </Carousel>
-      <Element id="about_us" className="element" />
     </HStack>
   );
 };

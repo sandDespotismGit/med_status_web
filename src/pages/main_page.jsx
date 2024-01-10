@@ -12,8 +12,8 @@ import Footer from "../components/footer";
 import ReviewsAboutUs from "../components/reviews_about_us";
 import useWindowDimensions from "../hooks/window_dimensions";
 import { Heading, VStack, Text, Button, Box } from "@chakra-ui/react";
-import React, { useEffect, useState } from 'react';
-import { ArrowUpIcon } from '@chakra-ui/icons';
+import React, { useEffect, useState } from "react";
+import { ArrowUpIcon } from "@chakra-ui/icons";
 const MainPage = () => {
   const { width, height } = useWindowDimensions();
   const [isVisible, setIsVisible] = useState(false);
@@ -21,7 +21,7 @@ const MainPage = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
@@ -34,25 +34,27 @@ const MainPage = () => {
       }
     };
 
-    window.addEventListener('scroll', toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility);
 
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   return (
-    <VStack width="100%" overflowX='hidden'>
+    <VStack width="100%" overflowX="hidden">
       {isVisible && (
         <Box
           onClick={scrollToTop}
-          position='fixed'
-          bottom='20px'
-          right={['16px', '84px']}
-          zIndex={3}>
+          position="fixed"
+          bottom="20px"
+          right={["16px", "84px"]}
+          zIndex={3}
+        >
           <Button
-            size={'sm'}
+            size={"sm"}
             rightIcon={<ArrowUpIcon />}
-            colorScheme='green'
-            variant='solid'>
+            colorScheme="green"
+            variant="solid"
+          >
             Наверх
           </Button>
         </Box>
@@ -67,7 +69,11 @@ const MainPage = () => {
       >
         <Header />
         <Carousel />
-        <VStack width={width >= 768 ? "30%" : '100%'} align="center" textAlign="center">
+        <VStack
+          width={width >= 768 ? "30%" : "100%"}
+          align="center"
+          textAlign="center"
+        >
           <Heading size="lg" color="#085D65">
             Наши направления
           </Heading>
@@ -76,11 +82,17 @@ const MainPage = () => {
           </Text>
         </VStack>
         <InfoPanel />
-        <VStack width={width >= 768 ? "30%" : '100%'} align="center" textAlign="center">
+        <VStack
+          width={width >= 768 ? "30%" : "100%"}
+          align="center"
+          textAlign="center"
+        >
           <Heading size="lg" color="#085D65">
             Наши врачи
           </Heading>
-          <Text color="#7E7E7E">С вами рядом будут высококвалифицированные специалисты</Text>
+          <Text color="#7E7E7E">
+            С вами рядом будут высококвалифицированные специалисты
+          </Text>
         </VStack>
         <OurDocs />
         {/* <VStack align="center" marginTop="30px" marginBottom="30px">
@@ -101,9 +113,9 @@ const MainPage = () => {
         {width >= 768 ? <ReviewsAboutUs /> : null}
         <Checkin />
         <Licenses />
-        {width >= 768 ? <MapBlock/> : null}
+        <MapBlock />
       </VStack>
-      {width >= 768 ? <Footer/> : null}
+      <Footer />
     </VStack>
   );
 };

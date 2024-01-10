@@ -1,16 +1,16 @@
-import PageHeader from "../components/page_header";
-import PageFooter from "../components/pagefooter";
+import Header from "../components/header";
+import Footer from "../components/footer";
 import { Heading, VStack, Text, Button, Card, CardBody} from "@chakra-ui/react";
 const Pediatria = () => {
   return (
     <VStack
       width="100%"
-      paddingLeft={["10px", "15px", "30px", "45px", "225px"]}
-      paddingRight={["10px", "15px", "30px", "45px", "225px"]}
+      paddingLeft={["0px", "10px", "25px", "40px", "200px"]}
+      paddingRight={["0px", "10px", "25px", "40px", "200px"]}
       backgroundColor="#E7F1EE"
       spacing="30px"
     >
-      <PageHeader />
+      <Header />
         <Heading size="lg" color="#085D65">
           Педиатрия
         </Heading>
@@ -39,7 +39,7 @@ const Pediatria = () => {
             </Text>
           </CardBody>
         </Card>
-        <PageFooter />
+        <Footer />
     </VStack>
   );
 };

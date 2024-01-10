@@ -1,5 +1,5 @@
-import PageHeader from "../components/page_header";
-import PageFooter from "../components/pagefooter";
+import Header from "../components/header";
+import Footer from "../components/footer";
 import {
   Heading,
   VStack,
@@ -14,14 +14,14 @@ const Cardiologia = () => {
   return (
     <VStack
       width="100%"
-      paddingLeft={["10px", "15px", "30px", "45px", "225px"]}
-      paddingRight={["10px", "15px", "30px", "45px", "225px"]}
+      paddingLeft={["0px", "10px", "25px", "40px", "200px"]}
+      paddingRight={["0px", "10px", "25px", "40px", "200px"]}
       backgroundColor="#E7F1EE"
       spacing="30px"
       minHeight="100vh"
       justify="space-between"
     >
-      <PageHeader />
+      <Header />
       <Heading size="lg" color="#085D65">
         Кардиология
       </Heading>
@@ -42,7 +42,7 @@ const Cardiologia = () => {
         </CardBody>
       </Card>
 
-      <PageFooter />
+      <Footer />
     </VStack>
   );
 };
