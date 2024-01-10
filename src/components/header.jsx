@@ -101,6 +101,7 @@ const Header = () => {
         </Text>
       </HStack>
     </VStack>
+    
   );
 };
 export default Header;

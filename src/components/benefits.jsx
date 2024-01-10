@@ -7,6 +7,8 @@ import hospital5 from "./../images/hospital5.webp";
 import hospital6 from "./../images/hospital6.webp";
 import useWindowDimensions from "../hooks/window_dimensions";
 import { useState } from "react";
+import { Element} from 'react-scroll';
+
 const Benefits = () => {
   const [side_image, setSideImage] = useState(hospital1);
   const { width, height } = useWindowDimensions();
@@ -106,6 +108,7 @@ const Benefits = () => {
           // }}
         />
       </Stack>
+      <Element id="review" className="element"/>
     </VStack>
   );
 };

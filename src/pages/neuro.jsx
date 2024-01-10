@@ -1,5 +1,5 @@
-import Header from "../components/header";
-import Footer from "../components/footer";
+import PageHeader from "../components/page_header";
+import PageFooter from "../components/pagefooter";
 import {
   Heading,
   VStack,
@@ -21,7 +21,7 @@ const Neuro = () => {
       minHeight="100vh"
       justify="space-between"
     >
-      <Header />
+      <PageHeader />
       <Heading size="lg" color="#085D65">
       Неврология
       </Heading>
@@ -54,7 +54,7 @@ const Neuro = () => {
         </CardBody>
       </Card>
 
-      <Footer />
+      <PageFooter />
     </VStack>
   );
 };

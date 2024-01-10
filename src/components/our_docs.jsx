@@ -11,7 +11,7 @@ const OurDocs = () => {
   const [slides, setSlides] = useState(null);
   const { width, height } = useWindowDimensions();
   useEffect(() => {
-    fetch("http://95.214.62.189:1337/api/doctors?populate=deep")
+    fetch("https://admin.xn--73-6kcpe5bybbhbl.xn--p1ai/api/doctors?populate=deep")
       .then((response) => response.json())
       .then(function (commits) {
         let data = commits.data;
@@ -168,6 +168,7 @@ const OurDocs = () => {
           </Button>
         </VStack> */}
       </Carousel>
+      <Element id="about_us" className="element" />
     </HStack>
   );
 };

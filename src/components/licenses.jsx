@@ -26,7 +26,7 @@ const Licenses = () => {
       <Heading size="lg" color="#085D65">
         Лицензии
       </Heading>
-      <HStack justify="space-around" width='100%'>
+      <HStack justify="space-around" width='30%' spacing={"100px"}>
         <Image src={license1} />
         <Image src={license2} />
       </HStack>

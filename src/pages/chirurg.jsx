@@ -1,5 +1,5 @@
-import Header from "../components/header";
-import Footer from "../components/footer";
+import PageHeader from "../components/page_header";
+import PageFooter from "../components/pagefooter";
 import {
   Heading,
   VStack,
@@ -21,7 +21,7 @@ const Chirurg = () => {
       minHeight="100vh"
       justify="space-between"
     >
-      <Header />
+      <PageHeader />
       <Heading size="lg" color="#085D65">
         Хирургия
       </Heading>
@@ -39,7 +39,7 @@ const Chirurg = () => {
         </CardBody>
       </Card>
 
-      <Footer />
+      <PageFooter />
     </VStack>
   );
 };
