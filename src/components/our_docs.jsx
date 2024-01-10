@@ -1,13 +1,15 @@
 import { HStack, Heading, VStack, Text, Image, Button } from "@chakra-ui/react";
 import telegina from "./../images/telegina.png";
 import minabetdinov from "./../images/minnabetdinov.png";
-import white from './../images/white.jpg'
+import white from "./../images/white.jpg";
 import Carousel from "nuka-carousel";
 import { useState } from "react";
 import { useEffect } from "react";
+import useWindowDimensions from "../hooks/window_dimensions";
 const OurDocs = () => {
   const [carousel, setCarousel] = useState(null);
   const [slides, setSlides] = useState(null);
+  const { width, height } = useWindowDimensions();
   useEffect(() => {
     fetch("http://95.214.62.189:1337/api/doctors?populate=deep")
       .then((response) => response.json())
@@ -20,22 +22,21 @@ const OurDocs = () => {
               backgroundColor="white"
               borderRadius="23px"
               boxShadow="0px 7px 15px 0px rgba(0, 0, 0, 0.25)"
-              padding="15px"
+              padding={["5px", "10px", "15px"]}
               textAlign="left"
               align="flex-start"
               maxWidth={"350px"}
               justify="space-between"
               height="65vh"
-
             >
               <img
                 src={
                   elem.attributes.photo.data != null
                     ? "http://95.214.62.189:1337" +
-                    elem.attributes.photo.data.attributes.url
+                      elem.attributes.photo.data.attributes.url
                     : null
                 }
-                style={{ height: "350px", objectFit:'contain'}}
+                style={{ height: "350px", objectFit: "contain" }}
               />
               <Text fontWeight={700}>{elem.attributes.name}</Text>
               <Text color="#428480">{elem.attributes.profession}</Text>
@@ -61,8 +62,22 @@ const OurDocs = () => {
       });
   }, []);
   return (
-    <HStack justify="center" align="center" textAlign="left" padding="25px">
-      <Carousel slidesToShow={4} withoutControls={true} cellSpacing={20} style={{ paddingBottom: '20px' }}>
+    <HStack
+      justify="center"
+      align="center"
+      textAlign="left"
+      padding={["5px", "10px", "15px", "20px", "25px"]}
+    >
+      <Carousel
+        slidesToShow={
+          width >= 1280 ? 4 : width >= 768 ? 3 : width >= 520 ? 2 : 1
+        }
+        cellSpacing={5}
+        dragThreshold={1}
+        withoutControls={true}
+        cellAlign="center"
+        style={{ paddingBottom: "20px" }}
+      >
         {carousel}
         {/* <VStack
           backgroundColor="white"

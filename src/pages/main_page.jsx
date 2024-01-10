@@ -19,15 +19,15 @@ const MainPage = () => {
 
       <VStack
         width="100%"
-        paddingLeft={["10px", "15px", "30px", "45px", "225px"]}
-        paddingRight={["10px", "15px", "30px", "45px", "225px"]}
+        paddingLeft={["0px", "10px", "25px", "40px", "200px"]}
+        paddingRight={["0px", "10px", "25px", "40px", "200px"]}
         backgroundColor="#E7F1EE"
         spacing="30px"
         paddingBottom={"30px"}
       >
         <Header />
         <Carousel />
-        <VStack width="30%" align="center" textAlign="center">
+        <VStack width={width >= 768 ? "30%" : '100%'} align="center" textAlign="center">
           <Heading size="lg" color="#085D65">
             Наши направления
           </Heading>
@@ -36,7 +36,7 @@ const MainPage = () => {
           </Text>
         </VStack>
         <InfoPanel />
-        <VStack width="30%" align="center" textAlign="center">
+        <VStack width={width >= 768 ? "30%" : '100%'} align="center" textAlign="center">
           <Heading size="lg" color="#085D65">
             Наши врачи
           </Heading>
@@ -59,12 +59,11 @@ const MainPage = () => {
         <Benefits />
         <Reviews />
         {width >= 768 ? <ReviewsAboutUs /> : null}
-
         <Checkin />
         <Licenses />
-        <MapBlock />
+        {width >= 768 ? <MapBlock/> : null}
       </VStack>
-      <Footer />
+      {width >= 768 ? <Footer/> : null}
     </VStack>
   );
 };

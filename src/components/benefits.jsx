@@ -11,7 +11,7 @@ const Benefits = () => {
   const [side_image, setSideImage] = useState(hospital1);
   const { width, height } = useWindowDimensions();
   return (
-    <VStack width="100%" spacing="25px" height={'70vh'}>
+    <VStack width="100%" spacing="25px">
       <Heading size="lg" color="#085D65">
         Наши преимущества
       </Heading>
@@ -21,9 +21,10 @@ const Benefits = () => {
         align="center"
         direction={width <= 768 ? "column" : "row"}
       >
-        <VStack spacing="10px" align="flex-start">
+        <VStack spacing="10px" align={width >= 768 ? "flex-start" : "center"}>
           <HStack>
             <Text
+              textAlign={width >= 768 ? "left" : "center"}
               variant="benefits_green"
               onClick={() => setSideImage(hospital1)}
               onMouseOver={() => setSideImage(hospital1)}
@@ -33,6 +34,7 @@ const Benefits = () => {
           </HStack>{" "}
           <HStack>
             <Text
+              textAlign={width >= 768 ? "left" : "center"}
               variant="benefits_green"
               onClick={() => setSideImage(hospital2)}
               onMouseOver={() => setSideImage(hospital2)}
@@ -42,6 +44,7 @@ const Benefits = () => {
           </HStack>
           <HStack>
             <Text
+              textAlign={width >= 768 ? "left" : "center"}
               variant="benefits_green"
               onClick={() => setSideImage(hospital3)}
               onMouseOver={() => setSideImage(hospital3)}
@@ -51,6 +54,7 @@ const Benefits = () => {
           </HStack>
           <HStack>
             <Text
+              textAlign={width >= 768 ? "left" : "center"}
               variant="benefits_green"
               onClick={() => setSideImage(hospital4)}
               onMouseOver={() => setSideImage(hospital4)}
@@ -60,6 +64,7 @@ const Benefits = () => {
           </HStack>
           <HStack>
             <Text
+              textAlign={width >= 768 ? "left" : "center"}
               variant="benefits_green"
               onClick={() => setSideImage(hospital5)}
               onMouseOver={() => setSideImage(hospital5)}
@@ -69,6 +74,7 @@ const Benefits = () => {
           </HStack>
           <HStack>
             <Text
+              textAlign={width >= 768 ? "left" : "center"}
               variant="benefits_green"
               onClick={() => setSideImage(hospital6)}
               onMouseOver={() => setSideImage(hospital6)}
@@ -78,6 +84,7 @@ const Benefits = () => {
           </HStack>
           <HStack>
             <Text
+              textAlign={width >= 768 ? "left" : "center"}
               variant="benefits_green"
               onClick={() => setSideImage(hospital1)}
               onMouseOver={() => setSideImage(hospital1)}
@@ -89,14 +96,14 @@ const Benefits = () => {
         <Image
           src={side_image}
           borderRadius={"31px"}
-          width={width <= 768 ? "100%" : "60vw"}
-          // height={width <= 768 ? "auto" : "60vh"}
-          style={{
-            borderRadius: "31px",
-            width: "40vw",
-            height: "60vh",
-            objectFit: "fill",
-          }}
+          width={width <= 768 ? "90vw" : "60vw"}
+          height={width <= 768 ? "auto" : "60vh"}
+          // style={{
+          //   borderRadius: "31px",
+          //   width: "40vw",
+          //   height: "60vh",
+          //   objectFit: "fill",
+          // }}
         />
       </Stack>
     </VStack>

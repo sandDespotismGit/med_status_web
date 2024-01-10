@@ -12,7 +12,6 @@ const MapBlock = () => {
         align="flex-start"
         padding="25px"
         width="30%"
-        height={'30vh'}
       >
         <Image src={logo} width="30%" />
         <Text>Ежедневно с 8:00 до 20:00</Text>

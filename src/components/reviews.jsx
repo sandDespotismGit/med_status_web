@@ -22,7 +22,6 @@ const Reviews = () => {
               textAlign="left"
               backgroundColor="white"
               padding="15px"
-              height={'30vh'}
               justify="space-between"
               borderRadius="12px"
               spacing="20px"

@@ -1,21 +1,52 @@
-import { HStack, VStack, Image, Text, Heading, Button } from "@chakra-ui/react";
+import {
+  HStack,
+  VStack,
+  Image,
+  Text,
+  Heading,
+  Button,
+  Stack,
+} from "@chakra-ui/react";
 
 import scooters from "./../images/scooters.jpg";
 import checkin from "./../images/checkin.png";
-
+import useWindowDimensions from "../hooks/window_dimensions";
 const Checkin = () => {
+  const { width, height } = useWindowDimensions();
   return (
-    <HStack padding="40px" backgroundColor='white' borderRadius='13px' width='80%' justify='space-between'>
-      <VStack width='30vw' align='flex-start' spacing='30px'>
-        <Heading size="lg" color="#085D65">
+    <Stack
+      padding={["10px", "20px", "40px"]}
+      backgroundColor="white"
+      borderRadius="13px"
+      width="95%"
+      justify="space-between"
+      align={"center"}
+      direction={width >= 520 ? "row" : "column"}
+    >
+      <VStack
+        width="30vw"
+        align={width >= 520 ? "flex-start" : "center"}
+        spacing="30px"
+      >
+        <Heading
+          size="lg"
+          color="#085D65"
+          zIndex={99}
+          textAlign={width >= 520 ? "left" : "center"}
+        >
           Запишитесь на прием к высококвалифицированным специалистам
         </Heading>
-        <Button borderRadius="30px" backgroundColor="#D3253A" color="white">
+        <Button
+          borderRadius="30px"
+          backgroundColor="#D3253A"
+          color="white"
+          zIndex={99}
+        >
           Записаться на прием
         </Button>
       </VStack>
-      <Image src={checkin} />
-    </HStack>
+      <Image src={checkin} width={"30vw"} />
+    </Stack>
   );
 };
 export default Checkin;

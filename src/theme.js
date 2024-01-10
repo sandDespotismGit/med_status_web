@@ -34,6 +34,13 @@ const theme = extendTheme({
         },
       },
     },
+    Link:{
+      variants: {
+        menu_green_link: {
+          fontSize:'10px'
+        }
+      }
+    },
     Button: {
       variants: {
         menu_yellow: {

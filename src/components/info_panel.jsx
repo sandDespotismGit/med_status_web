@@ -28,10 +28,11 @@ const InfoPanel = () => {
   const { width, height } = useWindowDimensions();
   return (
     <Grid
-      templateColumns={width <= 512 ? " repeat(2, 2fr)" : " repeat(4, 2fr)"}
+      templateColumns={width <= 832 ? " repeat(2, 2fr)" : " repeat(4, 2fr)"}
       gap={["35px", "42px", "44px", "45px", "60px"]}
       marginTop="30px"
-      width="80%"
+      padding={['10px', '10px', '0px', '0px', '0px']}
+      width="100%"
     >
       <GridItem>
         <VStack
