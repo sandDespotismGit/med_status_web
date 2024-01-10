@@ -1,8 +1,10 @@
 {
   "files": {
     "main.css": "./static/css/main.e6c13ad2.css",
-    "main.js": "./static/js/main.c3dc7fe7.js",
+    "main.js": "./static/js/main.a838ac9d.js",
     "static/media/action.jpg": "./static/media/action.239d3c151d81912710d4.jpg",
+    "static/media/license1.jpg": "./static/media/license1.e23a8b60a11204a42207.jpg",
+    "static/media/license2.jpg": "./static/media/license2.b7485a8d4c37595ccddf.jpg",
     "static/media/hospital4.webp": "./static/media/hospital4.770f03ecd1375d62163a.webp",
     "static/media/hospital1.webp": "./static/media/hospital1.0cfb0eccbe668e11986e.webp",
     "static/media/hospital6.webp": "./static/media/hospital6.929b0030f8da9af47502.webp",
@@ -37,10 +39,10 @@
     "static/media/str.svg": "./static/media/str.ab9576b674c3fecb34724a3b5604016e.svg",
     "static/media/shadowlogo.svg": "./static/media/shadowlogo.368b9d11e5cfacaab3494a8b1d76f590.svg",
     "main.e6c13ad2.css.map": "./static/css/main.e6c13ad2.css.map",
-    "main.c3dc7fe7.js.map": "./static/js/main.c3dc7fe7.js.map"
+    "main.a838ac9d.js.map": "./static/js/main.a838ac9d.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.c3dc7fe7.js"
+    "static/js/main.a838ac9d.js"
   ]
 }
