@@ -1,4 +1,4 @@
-import Header from "../components/header";
+import PageHeader from "../components/page_header";
 import Footer from "../components/footer";
 import {
   Heading,
@@ -21,7 +21,7 @@ const Cardiologia = () => {
       minHeight="100vh"
       justify="space-between"
     >
-      <Header />
+      <PageHeader />
       <Heading size="lg" color="#085D65">
         Кардиология
       </Heading>

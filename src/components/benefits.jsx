@@ -14,7 +14,7 @@ const Benefits = () => {
   const { width, height } = useWindowDimensions();
   return (
     <VStack width="100%" spacing="25px">
-      <Heading size="lg" color="#085D65">
+      <Heading marginTop={"30px"} size="lg" color="#085D65">
         Наши преимущества
       </Heading>
       <Stack

@@ -1,4 +1,4 @@
-import Header from "../components/header";
+import PageHeader from "../components/page_header";
 import Footer from "../components/footer";
 import { Heading, VStack, Text, Button, Card, CardBody } from "@chakra-ui/react";
 const Urologia = () => {
@@ -10,7 +10,7 @@ const Urologia = () => {
       backgroundColor="#E7F1EE"
       spacing="30px"
     >
-      <Header />
+      <PageHeader />
       <Heading size="lg" color="#085D65">
       Отделение урологии
         </Heading>

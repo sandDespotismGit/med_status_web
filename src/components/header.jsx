@@ -45,26 +45,26 @@ const Header = () => {
           spacing={["5px", "10px", "10px", "15px", "20px"]}
           align="center"
         >
-          <Text to="/#">
-            <Image
-              src={logo}
-              height={["30px", "30px", "40px", "50px", "60px"]}
-            />
-          </Text>
-          <VStack
+          <Link to="/#">
+              <Image
+                src={logo}
+                height={["30px", "30px", "40px", "50px", "60px"]}
+              />
+            </Link>
+          <HStack
             align="flex-start"
             spacing={["5px", "10px", "10px", "15px", "20px"]}
           >
             <Text
-              fontWeight={700}
-              fontSize={["10px", "10px", "14px", "16px", "18px"]}
-            >
-              пн-пт | cб-вс
-            </Text>
-            <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>
-              08:00-20:00 | 7:30-18:00
-            </Text>
-          </VStack>
+                fontWeight={700}
+                fontSize={["10px", "10px", "14px", "16px", "18px"]}
+              >
+                пн-пт: <br></ br> 07:30-20:00
+              </Text>
+              <Text fontWeight={700} fontSize={["10px", "10px", "14px", "16px", "18px"]}>
+                 cб-вс: <br></ br> 7:30-18:00
+              </Text>
+          </HStack>
         </HStack>
         <Stack
           align="center"
