@@ -54,7 +54,7 @@ const InfoPanel = () => {
             src={shadowlogo}
             style={{ position: "absolute", top: "0px", left: "0px" }}
           />
-          <Text zIndex={5} fontWeight={700} color={"#138B96"}>
+          <Text zIndex={5} fontWeight={700} color={"#138B96"} fontSize={width <= 400 ? "xs" : ""}> 
               Гинекология<br />
               <Link color="#15AD92" zIndex={5} href='#/ginekolog' style={{ textDecoration: 'none' }}>
               <HStack 
@@ -89,7 +89,7 @@ const InfoPanel = () => {
             src={shadowlogo}
             style={{ position: "absolute", top: "0px", left: "0px" }}
           />
-            <Text zIndex={5} fontWeight={700} color={"#138B96"}>
+            <Text zIndex={5} fontWeight={700} color={"#138B96"} fontSize={width <= 400 ? "xs" : ""}> 
               Кардиология<br />
               <Link color="#15AD92" zIndex={5} href='#/cardio' style={{ textDecoration: 'none' }}>
                 <HStack spacing="3px"
@@ -123,7 +123,7 @@ const InfoPanel = () => {
             src={shadowlogo}
             style={{ position: "absolute", top: "0px", left: "0px" }}
           />
-            <Text zIndex={5} fontWeight={700} color={"#138B96"}>
+            <Text zIndex={5} fontWeight={700} color={"#138B96"} fontSize={width <= 400 ? "xs" : ""}> 
               Терапия<br />
               <Link color="#15AD92" zIndex={5} href='#/terapy' style={{ textDecoration: 'none' }}>
               <HStack spacing="3px"
@@ -156,7 +156,7 @@ const InfoPanel = () => {
             src={shadowlogo}
             style={{ position: "absolute", top: "0px", left: "0px" }}
           />
-            <Text zIndex={5} fontWeight={700} color={"#138B96"}>
+            <Text zIndex={5} fontWeight={700} color={"#138B96"} fontSize={width <= 400 ? "xs" : ""}> 
               Анализы<br />
               <Link color="#15AD92" zIndex={5} href='#/analys' style={{ textDecoration: 'none' }}>
               <HStack spacing="3px"
@@ -190,7 +190,7 @@ const InfoPanel = () => {
             src={shadowlogo}
             style={{ position: "absolute", top: "0px", left: "0px" }}
           />
-            <Text zIndex={5} fontWeight={700} color={"#138B96"}>
+            <Text zIndex={5} fontWeight={700} color={"#138B96"} fontSize={width <= 400 ? "xs" : ""}> 
               IV-терапия<br />
               <Link color="#15AD92" zIndex={5} href='#/iv' style={{ textDecoration: 'none' }}>
               <HStack spacing="3px"
@@ -223,7 +223,7 @@ const InfoPanel = () => {
             src={shadowlogo}
             style={{ position: "absolute", top: "0px", left: "0px" }}
           />
-            <Text zIndex={5} fontWeight={700} color={"#138B96"}>
+            <Text zIndex={5} fontWeight={700} color={"#138B96"} fontSize={width <= 400 ? "xs" : ""}> 
               Check-Up<br />
               <Link color="#15AD92" zIndex={5} href='#/checkup' style={{ textDecoration: 'none' }}>
               <HStack spacing="3px" onMouseEnter={() => setIsShown({"cu": true})}
@@ -255,7 +255,7 @@ const InfoPanel = () => {
             src={shadowlogo}
             style={{ position: "absolute", top: "0px", left: "0px" }}
           />
-            <Text zIndex={5} fontWeight={700} color={"#138B96"}>
+            <Text zIndex={5} fontWeight={700} color={"#138B96"} fontSize={width <= 400 ? "xs" : ""}> 
               Педиатрия<br />
               <Link color="#15AD92" zIndex={5} href='#/pediatr' style={{ textDecoration: 'none' }}>
               <HStack spacing="3px" onMouseEnter={() => setIsShown({"pe": true})}
@@ -287,7 +287,7 @@ const InfoPanel = () => {
             src={shadowlogo}
             style={{ position: "absolute", top: "0px", left: "0px" }}
           />
-            <Text zIndex={5} fontWeight={700} color={"#138B96"}>
+            <Text zIndex={5} fontWeight={700} color={"#138B96"} fontSize={width <= 400 ? "xs" : ""}> 
               Неврология<br />
               <Link color="#15AD92" zIndex={5} href='#/neuro' style={{ textDecoration: 'none' }}>
               <HStack spacing="3px" onMouseEnter={() => setIsShown({"neu": true})}
@@ -319,7 +319,7 @@ const InfoPanel = () => {
             src={shadowlogo}
             style={{ position: "absolute", top: "0px", left: "0px" }}
           />
-            <Text zIndex={5} fontWeight={700} color={"#138B96"}>
+            <Text zIndex={5} fontWeight={700} color={"#138B96"} fontSize={width <= 400 ? "xs" : ""}> 
               УЗИ<br />
               <Link color="#15AD92" zIndex={5} href='#/uzi' style={{ textDecoration: 'none' }}>
               <HStack spacing="3px" onMouseEnter={() => setIsShown({"uzi": true})}
@@ -351,7 +351,7 @@ const InfoPanel = () => {
             src={shadowlogo}
             style={{ position: "absolute", top: "0px", left: "0px" }}
           />
-            <Text zIndex={5} fontWeight={700} color={"#138B96"}>
+            <Text zIndex={5} fontWeight={700} color={"#138B96"} fontSize={width <= 400 ? "xs" : ""}> 
               Хирургия<br />
               <Link color="#15AD92" zIndex={5} href='#/hirurgia' style={{ textDecoration: 'none' }}>
               <HStack spacing="3px" onMouseEnter={() => setIsShown({"hir": true})}
@@ -383,7 +383,7 @@ const InfoPanel = () => {
             src={shadowlogo}
             style={{ position: "absolute", top: "0px", left: "0px" }}
           />
-            <Text zIndex={5} fontWeight={700} color={"#138B96"}>
+            <Text zIndex={5} fontWeight={700} color={"#138B96"} fontSize={width <= 400 ? "xs" : ""}> 
               Урология<br />
               <Link color="#15AD92" zIndex={5} href='#/uro' style={{ textDecoration: 'none' }}>
               <HStack spacing="3px" onMouseEnter={() => setIsShown({"urol": true})}
@@ -415,7 +415,7 @@ const InfoPanel = () => {
             src={shadowlogo}
             style={{ position: "absolute", top: "0px", left: "0px" }}
           />
-            <Text zIndex={5} fontWeight={700} color={"#138B96"}>
+            <Text zIndex={5} fontWeight={700} color={"#138B96"} fontSize={width <= 400 ? "xs" : ""}> 
               Эндокринология<br />
               <Link color="#15AD92" zIndex={5} href='#/endo' style={{ textDecoration: 'none' }}>
               <HStack spacing="3px" onMouseEnter={() => setIsShown({"endo": true})}

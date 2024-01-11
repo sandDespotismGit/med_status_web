@@ -89,9 +89,9 @@ import {
         </HStack>
         <Divider borderColor={"#A0A0A0"} />
         <HStack
-          width="100%"
+          width={width > 1460 ? "60%" : "100%"}
           height="100%"
-          justify="center"
+          justify={'space-between'}
           spacing={["3px", "4px", "5px", "10px", "10px"]}
           padding={width >= 768 ? "10px 25px 15px 25px" : "5px 10px 8px 10px"}
         >

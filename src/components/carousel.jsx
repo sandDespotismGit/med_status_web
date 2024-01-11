@@ -6,7 +6,7 @@ import { Element} from 'react-scroll';
 const Carousel = () => {
   return (
     <VStack
-      width="80%"
+      width="100%"
       backgroundSize='contain'
       borderRadius="5px"
     >

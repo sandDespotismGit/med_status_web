@@ -96,21 +96,20 @@ const Header = () => {
       </HStack>
       <Divider borderColor={"#A0A0A0"} />
       <HStack
-        width="100%"
+        width={width > 1460 ? "60%" : "100%"}
         height="100%"
-        justify="center"
+        justify={'space-between'}
         spacing={["3px", "4px", "5px", "10px", "10px"]}
         padding={width >= 768 ? "10px 25px 15px 25px" : "5px 10px 8px 10px"}
       >
         <Link
           activeClass="active"
           to="about_us"
-          spy={true}
           smooth={true}
           offset={50}
           duration={500}
         >
-          <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>О нас</Text>
+          <LinkReact> <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>О нас</Text> </LinkReact>
         </Link>
         <Link
           activeClass="active"
@@ -120,9 +119,10 @@ const Header = () => {
           offset={50}
           duration={500}
         >
-          <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>
+          <LinkReact><Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>
             Направления
           </Text>
+          </LinkReact>
         </Link>
         <Link
           activeClass="active"
@@ -132,10 +132,10 @@ const Header = () => {
           offset={50}
           duration={500}
         >
-          <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>Врачи</Text>
+          <LinkReact><Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>Врачи</Text></LinkReact>
         </Link>
         <LinkReact to="/#">
-          <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>Цены</Text>
+          <LinkReact><Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>Цены</Text></LinkReact>
         </LinkReact>
         <Link
           activeClass="active"
@@ -145,9 +145,10 @@ const Header = () => {
           offset={50}
           duration={500}
         >
-          <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>
+          <LinkReact><Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>
             Отзывы
           </Text>
+          </LinkReact>
         </Link>
         <Link
           activeClass="active"
@@ -157,9 +158,11 @@ const Header = () => {
           offset={50}
           duration={500}
         >
+          <LinkReact>
           <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>
             Контакты
           </Text>
+          </LinkReact>
         </Link>
         <Link
           activeClass="active"
@@ -169,9 +172,11 @@ const Header = () => {
           offset={50}
           duration={500}
         >
+          <LinkReact>
           <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>
             Документация
           </Text>
+          </LinkReact>
         </Link>
       </HStack>
     </VStack>

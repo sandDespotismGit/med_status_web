@@ -100,12 +100,9 @@ const Benefits = () => {
           borderRadius={"31px"}
           width={width <= 768 ? "90vw" : "60vw"}
           height={width <= 768 ? "auto" : "60vh"}
-          // style={{
-          //   borderRadius: "31px",
-          //   width: "40vw",
-          //   height: "60vh",
-          //   objectFit: "fill",
-          // }}
+          style={{
+            objectFit: "cover",
+          }}
         />
       </Stack>
       <Element id="review" className="element"/>
