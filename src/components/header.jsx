@@ -172,7 +172,7 @@ const Header = () => {
           offset={50}
           duration={500}
         >
-          <LinkReact>
+          <LinkReact to='docs'>
           <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>
             Документация
           </Text>

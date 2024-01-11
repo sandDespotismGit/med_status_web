@@ -4,10 +4,12 @@ import { MdOutlineStar } from "react-icons/md";
 import Carousel from "nuka-carousel";
 import { useState } from "react";
 import { useEffect } from "react";
+import useWindowDimensions from "../hooks/window_dimensions";
 
 const Reviews = () => {
   const [carousel, setCarousel] = useState(null);
   const [slides, setSlides] = useState(null);
+  const { width, height } = useWindowDimensions();
   useEffect(() => {
     fetch("https://admin.xn--73-6kcpe5bybbhbl.xn--p1ai/api/reviews")
       .then((response) => response.json())

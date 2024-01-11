@@ -172,11 +172,9 @@ const Footer = () => {
                 Мы в соцсетях
               </Text>
               <HStack>
-                <LinkReact to="https://vk.com/id783380624">
+                <LinkReact to="https://vk.com/medstatus_clinica">
                   <Image src={vk} />
                 </LinkReact>
-                <Image src={whatsapp} />
-                <Image src={telegram} />
               </HStack>
             </VStack>
             <VStack alignSelf={"flex-end"} align={"flex-end"}>

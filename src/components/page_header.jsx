@@ -95,8 +95,6 @@ import {
           spacing={["3px", "4px", "5px", "10px", "10px"]}
           padding={width >= 768 ? "10px 25px 15px 25px" : "5px 10px 8px 10px"}
         >
-          
-          <Divider orientation={"vertical"} borderColor={'#A0A0A0'} />
            <Link to='/#'><Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>О нас</Text></Link>
            <Divider orientation="vertical" />
            <Link to='/#'><Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>Направления</Text></Link>
@@ -109,15 +107,9 @@ import {
            <Divider orientation="vertical" />
            <Link to='/#'><Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>Контакты</Text></Link>
            <Divider orientation="vertical" />
-           <Link to='/#'><Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>Документация</Text></Link>
+           <Link to='../docs'><Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>Документация</Text></Link>
          </HStack>
        </VStack>
     );
   };
   export default PageHeader;
-//           
-//       
-//     );
-//   };
-//   export default PageHeader;
-  

@@ -239,7 +239,7 @@ const InfoPanel = () => {
             </Text>
         </VStack>
       </GridItem>
-      <GridItem>
+      {/* <GridItem>
         <VStack
           borderRadius="16px"
           border="0px solid #000"
@@ -270,7 +270,7 @@ const InfoPanel = () => {
               </Link>
             </Text>
         </VStack>
-      </GridItem>
+  </GridItem> */}
       <GridItem>
         <VStack
           borderRadius="16px"
@@ -335,7 +335,7 @@ const InfoPanel = () => {
             </Text>
         </VStack>
       </GridItem>
-      <GridItem>
+      {/*<GridItem>
         <VStack
           borderRadius="16px"
           border="0px solid #000"
@@ -366,7 +366,7 @@ const InfoPanel = () => {
               </Link>
             </Text>
         </VStack>
-      </GridItem>
+      </GridItem> */}
       <GridItem>
         <VStack
           borderRadius="16px"

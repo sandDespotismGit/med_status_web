@@ -13,6 +13,7 @@ import Neuro from "./pages/neuro";
 import Checkup from "./pages/ckeckup";
 import Chirurg from "./pages/chirurg";
 import Endo from "./pages/endo";
+import Docs from "./pages/docs";
 const router = createHashRouter([
   {
     path: "/",
@@ -30,10 +31,10 @@ const router = createHashRouter([
     path: "/uro",
     element: <Urologia />,
   },
-  {
+  /*{
     path: "/pediatr",
     element: <Pediatria />,
-  },
+  }, */
   {
     path: "/cardio",
     element: <Cardiologia />,
@@ -58,13 +59,17 @@ const router = createHashRouter([
     path: "/checkup",
     element: <Checkup />,
   },
-  {
+  /* {
     path: "/hirurgia",
     element: <Chirurg />,
+  }, */
+  {
+    path: "/endo21",
+    element: <Endo />,
   },
   {
-    path: "/endo",
-    element: <Endo />,
+    path: "/docs",
+    element: <Docs />,
   },
 ]);
 function App() {
