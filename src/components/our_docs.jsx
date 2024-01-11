@@ -6,7 +6,7 @@ import Carousel from "nuka-carousel";
 import { useState } from "react";
 import { useEffect } from "react";
 import useWindowDimensions from "../hooks/window_dimensions";
-import { Element} from 'react-scroll';
+import { Element } from "react-scroll";
 
 const OurDocs = () => {
   const [carousel, setCarousel] = useState(null);
@@ -38,7 +38,7 @@ const OurDocs = () => {
                       elem.attributes.photo.data.attributes.url
                     : null
                 }
-                style={{ height: "350px", objectFit:'contain', 'pointer-events': 'none'}}
+                style={{ height: "350px", objectFit: "contain", 'pointer-events': 'none'}}
               />
               <Text fontWeight={700}>{elem.attributes.name}</Text>
               <Text color="#428480">{elem.attributes.profession}</Text>
@@ -72,7 +72,7 @@ const OurDocs = () => {
     >
       <Carousel
         slidesToShow={
-          width >= 1280 ? 4 : width >= 768 ? 3 : width >= 520 ? 2 : 1
+          width >= 1280 ? 4 : width >= 768 ? 3 : width >= 520 ? 3 : 3
         }
         cellSpacing={5}
         dragThreshold={1}
