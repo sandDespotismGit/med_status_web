@@ -22,10 +22,22 @@ import {
   scrollSpy,
 } from "react-scroll";
 import useWindowDimensions from "../hooks/window_dimensions";
+import { useState } from "react";
+import ContactFormModal from "./contact_form_modal";
 
 const Header = () => {
   const navigate = useNavigate();
   const { width, height } = useWindowDimensions();
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <VStack
       align="center"
@@ -46,24 +58,27 @@ const Header = () => {
           align="center"
         >
           <Link to="/#">
-              <Image
-                src={logo}
-                height={["30px", "30px", "40px", "50px", "60px"]}
-              />
-            </Link>
+            <Image
+              src={logo}
+              height={["30px", "30px", "40px", "50px", "60px"]}
+            />
+          </Link>
           <HStack
             align="flex-start"
             spacing={["5px", "10px", "10px", "15px", "20px"]}
           >
             <Text
-                fontWeight={700}
-                fontSize={["10px", "10px", "14px", "16px", "18px"]}
-              >
-                пн-пт: <br></ br> 07:30-20:00
-              </Text>
-              <Text fontWeight={700} fontSize={["10px", "10px", "14px", "16px", "18px"]}>
-                 cб-вс: <br></ br> 7:30-18:00
-              </Text>
+              fontWeight={700}
+              fontSize={["10px", "10px", "14px", "16px", "18px"]}
+            >
+              пн-пт: <br></br> 07:30-20:00
+            </Text>
+            <Text
+              fontWeight={700}
+              fontSize={["10px", "10px", "14px", "16px", "18px"]}
+            >
+              cб-вс: <br></br> 7:30-18:00
+            </Text>
           </HStack>
         </HStack>
         <Stack
@@ -88,9 +103,11 @@ const Header = () => {
               backgroundColor="#D3253A"
               color="white"
               fontSize={["10px", "10px", "14px", "16px", "18px"]}
+              onClick={handleOpenModal}
             >
               Записаться на прием
             </Button>
+            <ContactFormModal isOpen={isModalOpen} onClose={handleCloseModal} />
           </VStack>
         </Stack>
       </HStack>
@@ -98,7 +115,7 @@ const Header = () => {
       <HStack
         width={width > 1460 ? "60%" : "100%"}
         height="100%"
-        justify={'space-between'}
+        justify={"space-between"}
         spacing={["3px", "4px", "5px", "10px", "10px"]}
         padding={width >= 768 ? "10px 25px 15px 25px" : "5px 10px 8px 10px"}
       >
@@ -109,7 +126,12 @@ const Header = () => {
           offset={50}
           duration={500}
         >
-          <LinkReact> <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>О нас</Text> </LinkReact>
+          <LinkReact>
+            {" "}
+            <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>
+              О нас
+            </Text>{" "}
+          </LinkReact>
         </Link>
         <Link
           activeClass="active"
@@ -119,9 +141,10 @@ const Header = () => {
           offset={50}
           duration={500}
         >
-          <LinkReact><Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>
-            Направления
-          </Text>
+          <LinkReact>
+            <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>
+              Направления
+            </Text>
           </LinkReact>
         </Link>
         <Link
@@ -132,10 +155,18 @@ const Header = () => {
           offset={50}
           duration={500}
         >
-          <LinkReact><Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>Врачи</Text></LinkReact>
+          <LinkReact>
+            <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>
+              Врачи
+            </Text>
+          </LinkReact>
         </Link>
         <LinkReact to="/#">
-          <LinkReact><Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>Цены</Text></LinkReact>
+          <LinkReact>
+            <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>
+              Цены
+            </Text>
+          </LinkReact>
         </LinkReact>
         <Link
           activeClass="active"
@@ -145,9 +176,10 @@ const Header = () => {
           offset={50}
           duration={500}
         >
-          <LinkReact><Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>
-            Отзывы
-          </Text>
+          <LinkReact>
+            <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>
+              Отзывы
+            </Text>
           </LinkReact>
         </Link>
         <Link
@@ -159,9 +191,9 @@ const Header = () => {
           duration={500}
         >
           <LinkReact>
-          <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>
-            Контакты
-          </Text>
+            <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>
+              Контакты
+            </Text>
           </LinkReact>
         </Link>
         <Link
@@ -172,10 +204,10 @@ const Header = () => {
           offset={50}
           duration={500}
         >
-          <LinkReact to='docs'>
-          <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>
-            Документация
-          </Text>
+          <LinkReact to="docs">
+            <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>
+              Документация
+            </Text>
           </LinkReact>
         </Link>
       </HStack>
