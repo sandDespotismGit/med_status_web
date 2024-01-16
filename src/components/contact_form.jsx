@@ -1,49 +1,54 @@
-// ContactForm.js
-import React from "react";
-import { Button, VStack } from "@chakra-ui/react";
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
+import { VStack, Input, Text, Button } from "@chakra-ui/react";
 
-const ContactForm = () => {
+const EmailSender = () => {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+
+  const sendEmail = async () => {
+    try {
+      const templateParams = {
+        name,
+        phone,
+      };
+
+      await emailjs.send(
+        "service_id",
+        "template_id",
+        templateParams,
+        "public_user_key"
+      );
+
+      alert("Email sent successfully!");
+    } catch (error) {
+      alert("Error sending email:", error);
+    }
+  };
+
   return (
-    <form action="mailto:example@gmail.com" method="post" encType="text/plain">
-      <VStack spacing={"15px"} align={"flex-start"} padding={"15px"}>
-        <label htmlFor="firstName">Имя:</label>
-        <input
+    <VStack spacing={"15px"} padding={"10px"} align={"flex-start"}>
+      <label>
+        Имя:
+        <Input
           type="text"
-          id="firstName"
-          name="firstName"
-          style={{
-            borderRadius: "5px",
-            border: "1px solid #ccc",
-            padding: "8px",
-            width: "100%",
-          }}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
         />
-        <label htmlFor="phone">Телефон:</label>
-        <input
+      </label>
+      <br />
+      <label>
+        Телефон:
+        <Input
           type="tel"
-          id="phone"
-          name="phone"
-          style={{
-            borderRadius: "5px",
-            border: "1px solid #ccc",
-            padding: "8px",
-            width: "100%",
-          }}
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
         />
-        <Button
-          type="submit"
-          borderRadius="30px"
-          border="1px solid red"
-          borderColor="red"
-          color="#085D65"
-          backgroundColor={"transparent"}
-          fontSize={["10px", "10px", "14px", "16px", "18px"]}
-        >
-          Записаться
-        </Button>
-      </VStack>
-    </form>
+      </label>
+      <br />
+      <Button onClick={sendEmail}>Отправить</Button>
+    </VStack>
   );
 };
 
-export default ContactForm;
+export default EmailSender;
