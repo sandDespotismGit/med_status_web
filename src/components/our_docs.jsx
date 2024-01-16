@@ -13,7 +13,7 @@ const OurDocs = () => {
   const [slides, setSlides] = useState(null);
   const { width, height } = useWindowDimensions();
   useEffect(() => {
-    fetch("https://admin.xn--73-6kcpe5bybbhbl.xn--p1ai/api/doctors?populate=deep")
+    fetch("https://admin.xn--73-6kcpe5bybbhbl.xn--p1ai/api/doctors?populate=deep&sort=index")
       .then((response) => response.json())
       .then(function (commits) {
         let data = commits.data;

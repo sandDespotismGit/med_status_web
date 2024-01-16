@@ -23,7 +23,8 @@ const MapBlock = () => {
       >
         <Element id="contacts" className="element" />
         <Image src={logo} width="60%" />
-        <Text marginTop={"30px"}>Ежедневно с 8:00 до 20:00</Text>
+        <Text marginTop={"30px"}>7:30 - 20:00</Text>
+        <Text>сб-вс: 7:30 - 18:00</Text>
         <Text fontWeight={700}>Ульяновск, Минаева, 48А</Text>
         <Text marginTop={"50px"}>Телефон:</Text>
         <Text fontWeight={700}>+7 (8422) 73-78-78</Text>

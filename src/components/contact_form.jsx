@@ -13,11 +13,12 @@ const EmailSender = () => {
         phone,
       };
 
+      console.log(templateParams);
       await emailjs.send(
-        "service_id",
-        "template_id",
+        "service_kq5ckb9",
+        "template_m1xy9dl",
         templateParams,
-        "public_user_key"
+        "1B5PIyf0K6pkI09Pk"
       );
 
       alert("Email sent successfully!");
@@ -27,8 +28,8 @@ const EmailSender = () => {
   };
 
   return (
-    <VStack spacing={"15px"} padding={"10px"} align={"flex-start"}>
-      <label>
+    <VStack color={'#085D65'} spacing={"15px"} padding={"10px"} align={"flex-start"}>
+      <label >
         Имя:
         <Input
           type="text"

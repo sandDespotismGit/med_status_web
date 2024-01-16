@@ -118,6 +118,7 @@ const Header = () => {
         justify={"space-between"}
         spacing={["3px", "4px", "5px", "10px", "10px"]}
         padding={width >= 768 ? "10px 25px 15px 25px" : "5px 10px 8px 10px"}
+        fontWeight={"bold"}
       >
         <Link
           activeClass="active"
@@ -161,12 +162,10 @@ const Header = () => {
             </Text>
           </LinkReact>
         </Link>
-        <LinkReact to="/#">
-          <LinkReact>
+        <LinkReact to="/price">
             <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>
               Цены
             </Text>
-          </LinkReact>
         </LinkReact>
         <Link
           activeClass="active"
@@ -182,34 +181,11 @@ const Header = () => {
             </Text>
           </LinkReact>
         </Link>
-        <Link
-          activeClass="active"
-          to="contacts"
-          spy={true}
-          smooth={true}
-          offset={50}
-          duration={500}
-        >
-          <LinkReact>
-            <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>
-              Контакты
-            </Text>
-          </LinkReact>
-        </Link>
-        <Link
-          activeClass="active"
-          to="lic"
-          spy={true}
-          smooth={true}
-          offset={50}
-          duration={500}
-        >
-          <LinkReact to="docs">
-            <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>
-              Документация
-            </Text>
-          </LinkReact>
-        </Link>
+        <LinkReact to="/contacts">
+          <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>
+            Контакты
+          </Text>
+        </LinkReact>
       </HStack>
     </VStack>
   );

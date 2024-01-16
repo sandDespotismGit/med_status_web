@@ -203,10 +203,8 @@ const Footer = () => {
           здравоохранения Ульяновской области 29.12.2023
         </Text>
         <VStack>
-          <Text fontSize={["10px", "10px", "14px", "14px", "16px"]} fontWeight={700}>
-            © 2023 «МЕДСТАТУС»
-          </Text>
-          <Text fontSize={["10px", "10px", "14px", "14px", "16px"]} fontWeight={700}>
+          <Text color="white" fontSize={["10px", "10px", "14px", "14px", "16px"]} fontWeight={700} textAlign={"right"}>
+            © 2024 «МЕДСТАТУС» <br></br>
             Политика конфиденциальности
           </Text>
         </VStack>

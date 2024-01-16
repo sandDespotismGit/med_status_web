@@ -94,6 +94,7 @@ import {
           justify={'space-between'}
           spacing={["3px", "4px", "5px", "10px", "10px"]}
           padding={width >= 768 ? "10px 25px 15px 25px" : "5px 10px 8px 10px"}
+          fontWeight={"bold"}
         >
            <Link to='/#'><Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>О нас</Text></Link>
            <Divider orientation="vertical" />
@@ -101,13 +102,11 @@ import {
            <Divider orientation="vertical" />
            <Link to='/#'> <Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>Врачи</Text></Link>
            <Divider orientation="vertical" />
-           <Link to='/#'><Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>Цены</Text></Link>
+           <Link to='/price'><Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>Цены</Text></Link>
            <Divider orientation="vertical" />
            <Link to='/#'><Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>Отзывы</Text></Link>
            <Divider orientation="vertical" />
-           <Link to='/#'><Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>Контакты</Text></Link>
-           <Divider orientation="vertical" />
-           <Link to='../docs'><Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>Документация</Text></Link>
+           <Link to='/contacts'><Text fontSize={["10px", "10px", "14px", "16px", "18px"]}>Контакты</Text></Link>
          </HStack>
        </VStack>
     );
