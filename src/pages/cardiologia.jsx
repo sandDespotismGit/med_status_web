@@ -10,7 +10,24 @@ import {
   Card,
   CardBody,
 } from "@chakra-ui/react";
+import { useState } from "react";
+import { useEffect } from "react";
+
 const Cardiologia = () => {
+  const [Ntext, setText] = useState(null);
+  useEffect(() => {
+    fetch("https://admin.медстатус73.рф/api/infos?filters[name][$eq]=Кардиология")
+      .then((response) => response.json())
+      .then(function (commits) {
+        let data = commits.data;
+        console.log(data)
+        let buffer = [];
+        for (let elem of data) {
+          setText(elem.attributes.text);
+        }
+      });
+  }, []);
+
   return (
     <VStack
       width="100%"
@@ -23,22 +40,13 @@ const Cardiologia = () => {
     >
       <PageHeader />
       <Heading size="lg" color="#085D65">
-        Кардиология
+      Кардиология
       </Heading>
       <Card borderRadius='15px'>
         <CardBody>
-          <Text>
-            Медицинский центр «МЕДСТАТУС» специализируемся на предоставлении
-            высококачественной медицинской помощи пациентам с заболеваниями
-            сердечно-сосудистой системы. Наша команда кардиологов обладает
-            широким опытом в диагностике, лечении и реабилитации пациентов с
-            различными заболеваниями сердца и сосудов. Врач кардиолог - это
-            специалист, который специализируется на диагностике, лечении и
-            профилактике заболеваний сердца и сосудов. Он проводит комплексное
-            обследование пациентов с целью выявления возможных
-            сердечно-сосудистых заболеваний и разрабатывает индивидуальные
-            программы лечения и реабилитации.
-          </Text>
+        <Text whiteSpace="pre-line">
+          {Ntext}
+        </Text>
         </CardBody>
       </Card>
 

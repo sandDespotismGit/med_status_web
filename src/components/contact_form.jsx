@@ -20,34 +20,31 @@ const EmailSender = () => {
         templateParams,
         "1B5PIyf0K6pkI09Pk"
       );
-
-      alert("Email sent successfully!");
     } catch (error) {
-      alert("Error sending email:", error);
     }
   };
 
   return (
     <VStack color={'#085D65'} spacing={"15px"} padding={"10px"} align={"flex-start"}>
-      <label >
+      <Text color={'#085D65'}>
         Имя:
         <Input
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-      </label>
+      </Text>
       <br />
-      <label>
+      <Text>
         Телефон:
         <Input
           type="tel"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
         />
-      </label>
+      </Text>
       <br />
-      <Button onClick={sendEmail}>Отправить</Button>
+      <Button borderColor={"red"} onClick={sendEmail}>Записаться</Button>
     </VStack>
   );
 };

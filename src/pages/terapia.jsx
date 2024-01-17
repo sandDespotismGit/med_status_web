@@ -1,6 +1,33 @@
-import Header from "../components/header";import PageHeader from "../components/page_header";import Footer from "../components/footer";
-import { Heading, VStack, Text, Button, Card, CardBody } from "@chakra-ui/react";
+import PageHeader from "../components/page_header";
+import Footer from "../components/footer";
+import {
+  Heading,
+  VStack,
+  Text,
+  Button,
+  List,
+  ListItem,
+  Card,
+  CardBody,
+} from "@chakra-ui/react";
+import { useState } from "react";
+import { useEffect } from "react";
+
 const Terapia = () => {
+  const [Ntext, setText] = useState(null);
+  useEffect(() => {
+    fetch("https://admin.медстатус73.рф/api/infos?filters[name][$eq]=Терапия")
+      .then((response) => response.json())
+      .then(function (commits) {
+        let data = commits.data;
+        console.log(data)
+        let buffer = [];
+        for (let elem of data) {
+          setText(elem.attributes.text);
+        }
+      });
+  }, []);
+
   return (
     <VStack
       width="100%"
@@ -8,32 +35,21 @@ const Terapia = () => {
       paddingRight={["0px", "10px", "25px", "40px", "200px"]}
       backgroundColor="#E7F1EE"
       spacing="30px"
+      minHeight="100vh"
+      justify="space-between"
     >
       <PageHeader />
       <Heading size="lg" color="#085D65">
       Отделение терапии
-        </Heading>
-        <Card borderRadius='15px'>
-          <CardBody>
-            <Text>
-            Отделение терапии в медицинском центре «МЕДСТАТУС»  в Ульяновске предназначено для предоставления комплексной медицинской помощи пациентам с различными внутренними заболеваниями. Наши высококвалифицированные терапевты специализируются на диагностике, лечении и профилактике широкого спектра заболеваний, а также осуществляют координацию медицинской помощи пациентам с различными проблемами здоровья.
-            <br></br><br></br>
-            <br></br>К терапевту обращаются пациенты с различными заболеваниями, такими как:
-            <br></br>- Респираторные инфекции (ОРВИ, ОРЗ, грипп)
-            <br></br>- Боли в животе
-            <br></br>- Гипертония и сердечно-сосудистые заболевания
-            <br></br>- Сахарный диабет
-            <br></br>- Проблемы с щитовидной железой
-            <br></br>- Заболевания желудочно-кишечного тракта
-            <br></br>- Нарушения сна и неврологические проблемы
-            <br></br><br></br> 
-            <br></br>Профилактический прием у терапевта играет важную роль в поддержании здоровья. Посещение терапевта для профилактических осмотров и консультаций позволяет выявлять возможные проблемы здоровья на ранних стадиях, а также проводить необходимые мероприятия для их предотвращения. Также терапевт может провести обследование и выявить факторы риска для развития различных заболеваний, что позволяет пациентам принимать меры по профилактике заболеваний и поддержанию общего здоровья.
-            <br></br><br></br> 
-            <br></br>Мы предлагаем нашим пациентам исчерпывающий и заботливый подход к медицинской помощи, где терапевты готовы предоставить квалифицированное лечение, советы по профилактике и поддержанию здоровья каждого пациента.
-            <br></br>Если Вам или вашим близким нужна качественная помощь в диагностике заболевани – добро пожаловать в  наш медицинский центр. Мы поможем вам не только восстановить здоровье, но и сохранить его на долгие годы
-            </Text>
-          </CardBody>
-        </Card>
+      </Heading>
+      <Card borderRadius='15px'>
+        <CardBody>
+        <Text whiteSpace="pre-line">
+          {Ntext}
+        </Text>
+        </CardBody>
+      </Card>
+
       <Footer />
     </VStack>
   );

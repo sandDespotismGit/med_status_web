@@ -65,7 +65,7 @@ const router = createHashRouter([
     element: <Chirurg />,
   }, */
   {
-    path: "/endo21",
+    path: "/endo",
     element: <Endo />,
   },
   {
