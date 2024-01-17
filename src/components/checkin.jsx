@@ -8,11 +8,23 @@ import {
   Stack,
 } from "@chakra-ui/react";
 
+import ContactFormModal from "./contact_form_modal";
+import { useState } from "react";
+
 import scooters from "./../images/scooters.jpg";
 import checkin from "./../images/checkin.png";
 import useWindowDimensions from "../hooks/window_dimensions";
 const Checkin = () => {
   const { width, height } = useWindowDimensions();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <Stack
       padding={["10px", "20px", "40px"]}
@@ -41,9 +53,11 @@ const Checkin = () => {
           backgroundColor="#D3253A"
           color="white"
           zIndex={99}
+          onClick={handleOpenModal}
         >
           Записаться на прием
         </Button>
+        <ContactFormModal isOpen={isModalOpen} onClose={handleCloseModal} />
       </VStack>
       <Image src={checkin} width={"30vw"} />
     </Stack>

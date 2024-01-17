@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
-import { VStack, Input, Text, Button } from "@chakra-ui/react";
+import { VStack, Input, Text, Button, HStack } from "@chakra-ui/react";
 
 const EmailSender = () => {
   const [name, setName] = useState("");
@@ -20,31 +20,37 @@ const EmailSender = () => {
         templateParams,
         "1B5PIyf0K6pkI09Pk"
       );
-    } catch (error) {
-    }
+    } catch (error) {}
   };
 
   return (
-    <VStack color={'#085D65'} spacing={"15px"} padding={"10px"} align={"flex-start"}>
-      <Text color={'#085D65'}>
-        Имя:
+    <VStack align={"flex-start"} spacing={'10px'} marginBottom={'25px'}>
+      <HStack>
         <Input
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          placeholder="Имя"
         />
-      </Text>
-      <br />
-      <Text>
-        Телефон:
         <Input
           type="tel"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
+          placeholder="Телефон"
         />
+      </HStack>
+      <Text fontSize={"12px"} color={"gray"}>
+        Нажимая на кнопку, я даю согласие на обработку персональных данных
       </Text>
-      <br />
-      <Button borderColor={"red"} onClick={sendEmail}>Записаться</Button>
+      <Button
+        borderColor={"red"}
+        onClick={sendEmail}
+        borderRadius={"18px"}
+        background={"transparent"}
+        border={"2px solid red"}
+      >
+        Записаться
+      </Button>
     </VStack>
   );
 };

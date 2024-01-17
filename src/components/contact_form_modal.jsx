@@ -9,7 +9,8 @@ import {
   ModalCloseButton,
   ModalBody,
   ModalFooter,
-  Text
+  Text,
+  Heading,
 } from "@chakra-ui/react";
 import EmailSender from "./contact_form";
 
@@ -17,10 +18,12 @@ const ContactFormModal = ({ isOpen, onClose }) => {
   return (
     <Modal isOpen={isOpen} onClose={onClose} size="md">
       <ModalOverlay />
-      <ModalContent>
-        <ModalHeader color={'#085D65'} ><Text fontWeight={"bold"}>Записаться на прием</Text></ModalHeader>
+      <ModalContent minWidth={["350px", "550px", "600px", "700px", "850px"]}>
+        <ModalHeader color={"#085D65"} px={5}>
+          <Heading size={"lg"}>Записаться на прием</Heading>
+        </ModalHeader>
         <ModalCloseButton />
-        <ModalBody>
+        <ModalBody px={5}>
           <EmailSender />
         </ModalBody>
         {/* <ModalFooter>

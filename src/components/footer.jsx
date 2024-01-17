@@ -26,18 +26,29 @@ import {
   animateScroll as scroll,
   scrollSpy,
 } from "react-scroll";
+import { useState } from "react";
+import ContactFormModal from "./contact_form_modal";
 import useWindowDimensions from "../hooks/window_dimensions";
 
 const Footer = () => {
   const { width, height } = useWindowDimensions();
   const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <VStack width="100%">
       <HStack
         backgroundColor="white"
         width="100%"
         justify="space-between"
-        padding={['10px', '15px', '20px', '25px']}
+        padding={["10px", "15px", "20px", "25px"]}
       >
         <Grid
           templateColumns={
@@ -48,7 +59,7 @@ const Footer = () => {
               : "repeat(2, 2fr)"
           }
           gap={["10px", "12px", "14px", "15px", "20px"]}
-          marginTop={['5px', '10px', '15px', '20px', '25px']}
+          marginTop={["5px", "10px", "15px", "20px", "25px"]}
           width="25%"
         >
           <GridItem>
@@ -128,16 +139,16 @@ const Footer = () => {
           </GridItem>
         </Grid>
         {width >= 940 ? (
-          <HStack
-            justify={'space-between'}
-            width={'50%'}
-          >
+          <HStack justify={"space-between"} width={"50%"}>
             <VStack
               justifySelf={"flex-end"}
               align={"flex-start"}
               alignSelf={"flex-end"}
             >
-              <Text fontSize={["10px", "10px", "14px", "16px", "18px"]} fontWeight={700}>
+              <Text
+                fontSize={["10px", "10px", "14px", "16px", "18px"]}
+                fontWeight={700}
+              >
                 Мы в соцсетях
               </Text>
               <HStack>
@@ -149,16 +160,31 @@ const Footer = () => {
               </HStack>
             </VStack>
             <VStack alignSelf={"flex-end"} align={"flex-end"}>
-              <Text fontWeight={700} fontSize={["10px", "10px", "14px", "16px", "18px"]}>+7 (8422) 73-78-78</Text>
-              <Text fontWeight={700} fontSize={["10px", "10px", "14px", "16px", "18px"]}>г. Ульяновск, ул. Минаева, 48А</Text>
+              <Text
+                fontWeight={700}
+                fontSize={["10px", "10px", "14px", "16px", "18px"]}
+              >
+                +7 (8422) 73-78-78
+              </Text>
+              <Text
+                fontWeight={700}
+                fontSize={["10px", "10px", "14px", "16px", "18px"]}
+              >
+                г. Ульяновск, ул. Минаева, 48А
+              </Text>
               <Button
                 borderRadius="30px"
                 backgroundColor="#D3253A"
                 color="white"
                 fontSize={["10px", "10px", "14px", "16px", "18px"]}
+                onClick={handleOpenModal}
               >
                 Записаться на прием
               </Button>
+              <ContactFormModal
+                isOpen={isModalOpen}
+                onClose={handleCloseModal}
+              />
             </VStack>
           </HStack>
         ) : (
@@ -168,7 +194,10 @@ const Footer = () => {
               align={"flex-end"}
               alignSelf={"flex-end"}
             >
-              <Text fontSize={["10px", "10px", "14px", "16px", "18px"]} fontWeight={700}>
+              <Text
+                fontSize={["10px", "10px", "14px", "16px", "18px"]}
+                fontWeight={700}
+              >
                 Мы в соцсетях
               </Text>
               <HStack>
@@ -178,16 +207,31 @@ const Footer = () => {
               </HStack>
             </VStack>
             <VStack alignSelf={"flex-end"} align={"flex-end"}>
-              <Text fontWeight={700} fontSize={["10px", "10px", "14px", "16px", "18px"]}>+7 (8422) 73-78-78</Text>
-              <Text fontWeight={700} fontSize={["10px", "10px", "14px", "16px", "18px"]}>г. Ульяновск, ул. Минаева, 48А</Text>
+              <Text
+                fontWeight={700}
+                fontSize={["10px", "10px", "14px", "16px", "18px"]}
+              >
+                +7 (8422) 73-78-78
+              </Text>
+              <Text
+                fontWeight={700}
+                fontSize={["10px", "10px", "14px", "16px", "18px"]}
+              >
+                г. Ульяновск, ул. Минаева, 48А
+              </Text>
               <Button
                 borderRadius="30px"
                 backgroundColor="#D3253A"
                 color="white"
                 fontSize={["10px", "10px", "14px", "16px", "18px"]}
+                onClick={handleOpenModal}
               >
                 Записаться на прием
               </Button>
+              <ContactFormModal
+                isOpen={isModalOpen}
+                onClose={handleCloseModal}
+              />
             </VStack>
           </VStack>
         )}
@@ -198,12 +242,22 @@ const Footer = () => {
         justify="space-between"
         padding={"25px"}
       >
-        <Text color="white"  fontWeight={700} width="35%" fontSize={["10px", "10px", "14px", "14px", "16px"]}>
+        <Text
+          color="white"
+          fontWeight={700}
+          width="35%"
+          fontSize={["10px", "10px", "14px", "14px", "16px"]}
+        >
           Лицензия. Л041-01188-73/01011638 Выданная : Министерство
           здравоохранения Ульяновской области 29.12.2023
         </Text>
         <VStack>
-          <Text color="white" fontSize={["10px", "10px", "14px", "14px", "16px"]} fontWeight={700} textAlign={"right"}>
+          <Text
+            color="white"
+            fontSize={["10px", "10px", "14px", "14px", "16px"]}
+            fontWeight={700}
+            textAlign={"right"}
+          >
             © 2024 «МЕДСТАТУС» <br></br>
             Политика конфиденциальности
           </Text>
@@ -216,7 +270,11 @@ const Footer = () => {
         align="center"
         justify={"center"}
       >
-        <Text fontSize={["16px", "16px", "20px", "22px", "24px"]} fontWeight={700} textAlign={"center"}>
+        <Text
+          fontSize={["16px", "16px", "20px", "22px", "24px"]}
+          fontWeight={700}
+          textAlign={"center"}
+        >
           Имеются противопоказания. Требуется консультация специалиста
         </Text>
       </HStack>

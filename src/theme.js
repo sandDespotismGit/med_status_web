@@ -7,7 +7,7 @@ const theme = extendTheme({
   },
   //варианты для различных компонентов
   fonts: {
-    body: "Roboto-mono",
+    body: `'Open Sans', sans-serif`,
   },
   components: {
     Text: {
@@ -34,12 +34,12 @@ const theme = extendTheme({
         },
       },
     },
-    Link:{
+    Link: {
       variants: {
         menu_green_link: {
-          fontSize:'10px'
-        }
-      }
+          fontSize: "10px",
+        },
+      },
     },
     Button: {
       variants: {
