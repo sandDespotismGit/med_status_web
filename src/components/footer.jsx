@@ -125,18 +125,6 @@ const Footer = () => {
               Контакты
             </Link>
           </GridItem>
-          <GridItem>
-            <Link
-              activeClass="active"
-              to="lic"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-            >
-              Документация
-            </Link>
-          </GridItem>
         </Grid>
         {width >= 940 ? (
           <HStack justify={"space-between"} width={"50%"}>
@@ -152,7 +140,7 @@ const Footer = () => {
                 Мы в соцсетях
               </Text>
               <HStack>
-                <LinkReact to="https://vk.com/id783380624">
+                <LinkReact to="https://vk.com/medstatus_clinica">
                   <Image src={vk} />
                 </LinkReact>
                 <Image src={whatsapp} />

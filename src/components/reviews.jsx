@@ -5,6 +5,7 @@ import Carousel from "nuka-carousel";
 import { useState } from "react";
 import { useEffect } from "react";
 import useWindowDimensions from "../hooks/window_dimensions";
+import { FaArrowLeft, FaArrowRight  } from "react-icons/fa";
 
 const Reviews = () => {
   const [carousel, setCarousel] = useState(null);
@@ -61,7 +62,16 @@ const Reviews = () => {
         Отзывы
       </Heading>
       <HStack justify="space-between">
-        <Carousel slidesToShow={2} cellAlign="center" cellSpacing={100} withoutControls={true}>
+        <Carousel slidesToShow={2} cellSpacing={100} renderCenterLeftControls={({ previousSlide }) => (
+          <button onClick={previousSlide}>
+            <FaArrowLeft />
+          </button>
+        )}
+        renderCenterRightControls={({ nextSlide }) => (
+          <button onClick={nextSlide}>
+            <FaArrowRight />
+          </button>
+        )}>
           {carousel}
         </Carousel>
       </HStack>

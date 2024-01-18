@@ -15,7 +15,7 @@ const MapBlock = () => {
     >
       <VStack
         backgroundColor="white"
-        boxShadow="0px 7px 4px 3px rgba(0, 0, 0, 0.25)"
+        boxShadow="0px 7px 15px 0px rgba(0, 0, 0, 0.25)"
         borderRadius="20px"
         align="flex-start"
         padding="50px"

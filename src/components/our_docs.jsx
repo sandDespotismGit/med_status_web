@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import useWindowDimensions from "../hooks/window_dimensions";
 import { Element } from "react-scroll";
+import { FaArrowLeft, FaArrowRight  } from "react-icons/fa";
 
 const OurDocs = () => {
   const [carousel, setCarousel] = useState(null);
@@ -76,10 +77,20 @@ const OurDocs = () => {
         }
         cellSpacing={5}
         dragThreshold={1}
-        withoutControls={true}
-        cellAlign="center"
-        style={{ paddingBottom: "20px" }}
+
+        style={{ paddingBottom: "20px", paddingLeft: "20px", paddingRight: "20px" }}
+        renderCenterLeftControls={({ previousSlide }) => (
+          <button onClick={previousSlide}>
+            <FaArrowLeft />
+          </button>
+        )}
+        renderCenterRightControls={({ nextSlide }) => (
+          <button onClick={nextSlide}>
+            <FaArrowRight />
+          </button>
+        )}
       >
+        
         {carousel}
         {/* <VStack
           backgroundColor="white"
