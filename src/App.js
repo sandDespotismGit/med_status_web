@@ -15,6 +15,7 @@ import Chirurg from "./pages/chirurg";
 import Endo from "./pages/endo";
 import Docs from "./pages/docs";
 import Price from "./pages/prices";
+import Perdan from "./pages/perdan";
 const router = createHashRouter([
   {
     path: "/",
@@ -75,6 +76,10 @@ const router = createHashRouter([
   {
     path: "/price",
     element: <Price />,
+  },
+  {
+  path: "/dannie",
+  element: <Perdan />,
   },
 ]);
 function App() {

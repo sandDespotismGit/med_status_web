@@ -40,7 +40,7 @@ const EmailSender = () => {
         />
       </HStack>
       <Text fontSize={"12px"} color={"gray"}>
-        Нажимая на кнопку, я даю согласие на <Link color="blue" href="https://admin.xn--73-6kcpe5bybbhbl.xn--p1ai/uploads/Soglashenie_na_obrabotku_personalnyh_dannyh_c95444515e.docx">
+        Нажимая на кнопку, я даю согласие на <Link color="blue" href="#/dannie">
           обработку персональных данных
           </Link>
       </Text>

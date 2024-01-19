@@ -12,13 +12,24 @@ import {
   import { GiHealthNormal } from "react-icons/gi";
   import logo from "./../images/back.png";
   import { Link } from "react-router-dom";
-  import React, { useEffect } from 'react';
+  import React, { useEffect, useState } from 'react';
   import { useNavigate } from "react-router";
   import useWindowDimensions from "../hooks/window_dimensions";
-
+  import ContactFormModal from "./contact_form_modal";
+  
   const PageHeader = () => {
     const navigate = useNavigate();
     const { width, height } = useWindowDimensions();
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
     return (
       <VStack
         align="center"
@@ -81,9 +92,11 @@ import {
                 backgroundColor="#D3253A"
                 color="white"
                 fontSize={["10px", "10px", "14px", "16px", "18px"]}
+                onClick={handleOpenModal}
               >
                 Записаться на прием
               </Button>
+              <ContactFormModal isOpen={isModalOpen} onClose={handleCloseModal} />
             </VStack>
           </Stack>
         </HStack>
