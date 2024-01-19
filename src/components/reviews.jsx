@@ -20,8 +20,7 @@ const Reviews = () => {
         for (let elem of data) {
           buffer.push(
             <VStack
-              
-              align="flex-start"
+              align={width > 570 ? "flex-start" : "center"}
               textAlign="left"
               backgroundColor="white"
               padding="15px"
@@ -37,12 +36,12 @@ const Reviews = () => {
                 <MdOutlineStar />
                 <MdOutlineStar />
               </HStack>
-              <Text marginBottom="5px">
+              <Text width={width > 570 ? "100%" : "50%"} marginBottom="5px">
                 <q>{elem.attributes.review}</q>
               </Text>
               <HStack
                 justify="space-between"
-                width="100%"
+                width={width > 570 ? "100%" : "50%"}
                 borderTop="2px solid"
                 paddingTop="5px"
               >
@@ -62,7 +61,9 @@ const Reviews = () => {
         Отзывы
       </Heading>
       <HStack justify="space-between">
-        <Carousel slidesToShow={2} cellSpacing={100} renderCenterLeftControls={({ previousSlide }) => (
+        <Carousel 
+        withoutControls={width > 570 ? false : true}
+        slidesToShow={width > 570 ? 2 : 1} cellSpacing={width > 570 ? 100 : 10} renderCenterLeftControls={({ previousSlide }) => (
           <button onClick={previousSlide}>
             <FaArrowLeft />
           </button>
