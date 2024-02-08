@@ -32,30 +32,65 @@ import {
     TableContainer,
   } from '@chakra-ui/react'
 import { useState } from "react";
-import { useEffect } from "react";
+import { useLayoutEffect  } from "react";
 import { GoDownload } from "react-icons/go";
+import uuid from 'react-uuid';
+import { GiButterflyFlower } from "react-icons/gi";
+import { RiLoader2Line } from "react-icons/ri";
 
 const Price = () => {
-    const [price, setPrice] = useState(null);
-    useEffect(() => {
-      fetch("https://admin.медстатус73.рф/api/prices?populate=deep")
-        .then((response) => response.json())
-        .then(function (commits) {
-          let data = commits.data;
-          let buffer = [];
-          for (let elem of data) {
-            buffer.push(
-              elem.attributes ? (
-                <Tr>
-                    <Td>{elem.attributes.name}</Td>
-                    <Td>{elem.attributes.price} руб.</Td>
-                </Tr>
-              ) : null
-            );
-          }
-          setPrice(buffer);
-        });
-    }, []);
+  const [state, setState] = useState(false);
+    const usePrice = () => {
+      const [price, setPrice] = useState(null);
+      useLayoutEffect(() => {
+        fetch("https://admin.медстатус73.рф/api/danns")
+          .then((response) => response.json())
+          .then(function (commits) {
+            let data = commits.data;
+            let buffer = [];
+            for (let elem of data) {
+              let bufferData = [];
+              fetch("https://admin.медстатус73.рф/api/prices?populate=deep&filters[napravleniya_v_czeny][dir]=" + elem.attributes.dir)
+                .then((response) => response.json())
+                .then(function (commits) {
+                  let dataС = commits.data;
+                  for (let elemC of dataС) {
+                    bufferData.push(
+                      elemC.attributes ? (
+                        <Tr key={uuid()}>
+                            <Td>{elemC.attributes.name}</Td>
+                            <Td>{elemC.attributes.price} руб.</Td>
+                        </Tr>
+                      ) : null
+                    );
+                  }
+                  buffer.push(
+                      <Table key={uuid()} variant='striped' colorScheme='blackAlpha' size='lg'>
+                        <Thead>
+                          <Tr><Text fontWeight={"bold"} color="#085D65" style={{marginTop: '25px'}}>{elem.attributes.dir}</Text></Tr>
+                          <Tr>
+                            <Th>Услуга</Th>
+                            <Th>Цена</Th>
+                          </Tr>
+                        </Thead>
+                        <Tbody>
+                            {bufferData}
+                        </Tbody>
+                      </Table>)
+                   setPrice(buffer);
+                })
+            }
+           
+          });
+          
+      }, []);
+      setTimeout(() => { setState(true);}, 1500)
+      if (state){
+        return price;
+      }
+      
+    };
+    
   return (
     <VStack
       width="100%"
@@ -68,21 +103,10 @@ const Price = () => {
     >
       <PageHeader />
       <Heading size="lg" color="#085D65">
-        Цены
+        {state ? 'Цены' : "Загрузка..."}
+
       </Heading>
-    <TableContainer width="80%">
-      <Table variant='striped' colorScheme='blackAlpha' size='lg'>
-        <Thead>
-          <Tr>
-            <Th>Услуга</Th>
-            <Th>Цена</Th>
-          </Tr>
-        </Thead>
-        <Tbody>
-            {price}
-        </Tbody>
-      </Table>
-</TableContainer>
+      <TableContainer key={uuid()} width="80%">{usePrice()}</TableContainer>
       <Footer />
     </VStack>
   );

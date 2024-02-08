@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
-import { VStack, Input, Text, Button, HStack } from "@chakra-ui/react";
+import { VStack, Input, Text, Button, HStack, Link } from "@chakra-ui/react";
 
 const EmailSender = ({setIsModalOpen}) => {
   const [name, setName] = useState("");
@@ -40,7 +40,9 @@ const EmailSender = ({setIsModalOpen}) => {
         />
       </HStack>
       <Text fontSize={"12px"} color={"gray"}>
-        Нажимая на кнопку, я даю согласие на обработку персональных данных
+        Нажимая на кнопку, я даю согласие на <Link color="blue" href="#/dannie">
+          обработку персональных данных
+          </Link>
       </Text>
       <Button
         borderColor={"red"}

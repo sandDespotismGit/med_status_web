@@ -63,9 +63,6 @@ import {
           </Link>
             </GridItem>
             <GridItem>
-            <Link to='/#'>
-            Документация
-          </Link>
             </GridItem>
           </Grid>
           <VStack
@@ -77,7 +74,7 @@ import {
               Мы в соцсетях
             </Text>
             <HStack>
-            <Link to="https://vk.com/id783380624">
+            <Link to="https://vk.com/medstatus_clinica">
               <Image src={vk} />
             </Link>
               <Image src={whatsapp} />

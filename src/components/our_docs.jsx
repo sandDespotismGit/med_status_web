@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import useWindowDimensions from "../hooks/window_dimensions";
 import { Element } from "react-scroll";
+import { FaArrowLeft, FaArrowRight  } from "react-icons/fa";
 
 const OurDocs = () => {
   const [carousel, setCarousel] = useState(null);
@@ -26,10 +27,9 @@ const OurDocs = () => {
               boxShadow="0px 7px 15px 0px rgba(0, 0, 0, 0.25)"
               padding={["5px", "10px", "15px"]}
               textAlign="left"
-              align="flex-start"
-              maxWidth={"350px"}
+              align={width > 520 ? "flex-start" : "center"}
               justify="space-between"
-              height="65vh"
+              height={width > 520 ? "65vh" : ""} 
             >
               <img
                 src={
@@ -42,7 +42,7 @@ const OurDocs = () => {
               />
               <Text fontWeight={700}>{elem.attributes.name}</Text>
               <Text color="#428480">{elem.attributes.profession}</Text>
-              <HStack width="100%" justify="space-between">
+              <HStack width={width > 520 ? "100%" : "30%"} justify="space-between">
                 <Text fontSize="14px">{elem.attributes.experience}</Text>
                 <Text fontSize="14px">
                   Приём: от {elem.attributes.price_by} руб
@@ -72,14 +72,24 @@ const OurDocs = () => {
     >
       <Carousel
         slidesToShow={
-          width >= 1280 ? 4 : width >= 768 ? 3 : width >= 520 ? 3 : 3
+          width >= 1280 ? 4 : width >= 768 ? 3 : width >= 520 ? 1 : 1
         }
         cellSpacing={5}
-        dragThreshold={1}
-        withoutControls={true}
-        cellAlign="center"
-        style={{ paddingBottom: "20px" }}
+        dragThreshold={width >= 520 ? 0.7 : 0}
+        withoutControls={width > 570 ? false : true}
+        style={{ paddingBottom: "20px"}}
+        renderCenterLeftControls={({ previousSlide }) => (
+          <button onClick={previousSlide}>
+            <FaArrowLeft />
+          </button>
+        )}
+        renderCenterRightControls={({ nextSlide }) => (
+          <button onClick={nextSlide}>
+            <FaArrowRight />
+          </button>
+        )}
       >
+        
         {carousel}
         {/* <VStack
           backgroundColor="white"

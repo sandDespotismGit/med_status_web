@@ -15,7 +15,7 @@ const MapBlock = () => {
     >
       <VStack
         backgroundColor="white"
-        boxShadow="0px 7px 4px 3px rgba(0, 0, 0, 0.25)"
+        boxShadow="0px 7px 15px 0px rgba(0, 0, 0, 0.25)"
         borderRadius="20px"
         align="flex-start"
         padding="50px"
@@ -23,7 +23,7 @@ const MapBlock = () => {
       >
         <Element id="contacts" className="element" />
         <Image src={logo} width="60%" />
-        <Text marginTop={"30px"}>7:30 - 20:00</Text>
+        <Text marginTop={"30px"}>пн-пт: 7:30 - 20:00</Text>
         <Text>сб-вс: 7:30 - 18:00</Text>
         <Text fontWeight={700}>Ульяновск, Минаева, 48А</Text>
         <Text marginTop={"50px"}>Телефон:</Text>

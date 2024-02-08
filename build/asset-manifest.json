@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.e6c13ad2.css",
-    "main.js": "./static/js/main.0aec8b95.js",
+    "main.js": "./static/js/main.fb010305.js",
     "static/media/action.jpg": "./static/media/action.239d3c151d81912710d4.jpg",
     "static/media/license1.jpg": "./static/media/license1.e23a8b60a11204a42207.jpg",
     "static/media/license2.jpg": "./static/media/license2.b7485a8d4c37595ccddf.jpg",
@@ -22,27 +22,27 @@
     "static/media/prodocs.png": "./static/media/prodocs.77aaa1b34b19f7d496e9.png",
     "static/media/yandex.png": "./static/media/yandex.db5705eaf3a6776926aa.png",
     "static/media/back.png": "./static/media/back.9e92245af52f664ebbfe.png",
-    "static/media/ginecolog.svg": "./static/media/ginecolog.44cd0b55742ac7d2044e644cc1d2a558.svg",
-    "static/media/uzi.svg": "./static/media/uzi.ca6cf6d2324ede8a0aef41f09e12df44.svg",
+    "static/media/ginecolog.svg": "./static/media/ginecolog.ffeb4675d030d025e6d2fa2575a0946c.svg",
+    "static/media/uzi.svg": "./static/media/uzi.7426e7df920b6f611ebf52fe63ca70cc.svg",
     "static/media/white.jpg": "./static/media/white.2ce07c3bf2f0455d5cf2.jpg",
-    "static/media/endo.svg": "./static/media/endo.39f764acaf27b9a5772ef56668993a0a.svg",
-    "static/media/urolog.svg": "./static/media/urolog.aabb9b93886990ef9990958d5fbc6922.svg",
-    "static/media/pediatr.svg": "./static/media/pediatr.d43b3ccb5d81670e52a11b3c39c97c7d.svg",
-    "static/media/check-up.svg": "./static/media/check-up.ff61da2649e79a86df41c8a4df1794c5.svg",
-    "static/media/analys.svg": "./static/media/analys.37981917f9d9e00137b0619b6f7bb331.svg",
-    "static/media/chirurg.svg": "./static/media/chirurg.8cd296da5a2ae16b4962d8feb9c49390.svg",
-    "static/media/cardio.svg": "./static/media/cardio.f41d720f1b299faff01f33fa43560786.svg",
-    "static/media/iv-1.svg": "./static/media/iv-1.0de6a6f30c2ca8b4d0b30810fe32eb89.svg",
-    "static/media/neuro.svg": "./static/media/neuro.bad20e35fff94d7ffe7c5126cd8b8b64.svg",
-    "static/media/terapy.svg": "./static/media/terapy.e9a95be842fba9996d0e198b45c40399.svg",
+    "static/media/endo.svg": "./static/media/endo.aff01e71759ee4f002c48dd39791a264.svg",
+    "static/media/urolog.svg": "./static/media/urolog.322cc44d4031f1c5dad773e4201885b3.svg",
+    "static/media/pediatr.svg": "./static/media/pediatr.057f2ffd05704aaec004c6f4e1292903.svg",
+    "static/media/check-up.svg": "./static/media/check-up.2afcdc8eaea82718289cf8795bb8419c.svg",
+    "static/media/analys.svg": "./static/media/analys.8b5c9cce9f279f6c68c84374a7309a8f.svg",
+    "static/media/chirurg.svg": "./static/media/chirurg.b1cbe35cfe2837a7fd61d95fd438b16f.svg",
+    "static/media/cardio.svg": "./static/media/cardio.da7c9c159a38238727bdf5a4fc9827ae.svg",
+    "static/media/iv-1.svg": "./static/media/iv-1.ab4b09604d24272b2eb085ff99d31890.svg",
+    "static/media/neuro.svg": "./static/media/neuro.5552c86982c5b3a9efca458152565ce9.svg",
+    "static/media/terapy.svg": "./static/media/terapy.37cfd49a7adc654262200ac43febaf46.svg",
     "index.html": "./index.html",
-    "static/media/str.svg": "./static/media/str.ab9576b674c3fecb34724a3b5604016e.svg",
+    "static/media/str.svg": "./static/media/str.fccea8f70cfe716d4ee5352440243358.svg",
     "static/media/shadowlogo.svg": "./static/media/shadowlogo.368b9d11e5cfacaab3494a8b1d76f590.svg",
     "main.e6c13ad2.css.map": "./static/css/main.e6c13ad2.css.map",
-    "main.0aec8b95.js.map": "./static/js/main.0aec8b95.js.map"
+    "main.fb010305.js.map": "./static/js/main.fb010305.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.0aec8b95.js"
+    "static/js/main.fb010305.js"
   ]
 }
