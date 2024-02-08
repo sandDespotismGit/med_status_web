@@ -184,6 +184,7 @@ const Footer = () => {
               <ContactFormModal
                 isOpen={isModalOpen}
                 onClose={handleCloseModal}
+                setIsModalOpen={setIsModalOpen}
               />
             </VStack>
           </HStack>
@@ -231,6 +232,7 @@ const Footer = () => {
               <ContactFormModal
                 isOpen={isModalOpen}
                 onClose={handleCloseModal}
+                setIsModalOpen={setIsModalOpen}
               />
             </VStack>
           </VStack>

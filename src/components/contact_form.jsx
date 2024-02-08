@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { VStack, Input, Text, Button, HStack } from "@chakra-ui/react";
 
-const EmailSender = () => {
+const EmailSender = ({setIsModalOpen}) => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
 
@@ -15,10 +15,10 @@ const EmailSender = () => {
 
       console.log(templateParams);
       await emailjs.send(
-        "service_kq5ckb9",
-        "template_m1xy9dl",
+        "",
+        "",
         templateParams,
-        "1B5PIyf0K6pkI09Pk"
+        ""
       );
     } catch (error) {}
   };
@@ -44,7 +44,7 @@ const EmailSender = () => {
       </Text>
       <Button
         borderColor={"red"}
-        onClick={sendEmail}
+        onClick={() => {sendEmail(); setIsModalOpen()}}
         borderRadius={"18px"}
         background={"transparent"}
         border={"2px solid red"}

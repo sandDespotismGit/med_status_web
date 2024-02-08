@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import EmailSender from "./contact_form";
 
-const ContactFormModal = ({ isOpen, onClose }) => {
+const ContactFormModal = ({ isOpen, onClose, setIsModalOpen }) => {
   return (
     <Modal isOpen={isOpen} onClose={onClose} size="md">
       <ModalOverlay />
@@ -24,7 +24,7 @@ const ContactFormModal = ({ isOpen, onClose }) => {
         </ModalHeader>
         <ModalCloseButton />
         <ModalBody px={5}>
-          <EmailSender />
+          <EmailSender setIsModalOpen={onClose} />
         </ModalBody>
         {/* <ModalFooter>
           <Button colorScheme="blue" onClick={onClose}>
