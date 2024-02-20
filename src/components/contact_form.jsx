@@ -15,10 +15,10 @@ const EmailSender = ({setIsModalOpen}) => {
 
       console.log(templateParams);
       await emailjs.send(
-        "",
-        "",
+        "service_kq5ckb9",
+        "template_m1xy9dl",
         templateParams,
-        ""
+        "1B5PIyf0K6pkI09Pk"
       );
     } catch (error) {}
   };
