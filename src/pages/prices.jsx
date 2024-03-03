@@ -84,7 +84,7 @@ const Price = () => {
           });
           
       }, []);
-      setTimeout(() => { setState(true);}, 1500)
+      setTimeout(() => { setState(true);}, 8000)
       if (state){
         return price;
       }
