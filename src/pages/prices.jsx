@@ -50,10 +50,11 @@ const Price = () => {
             let buffer = [];
             for (let elem of data) {
               let bufferData = [];
-              fetch("https://admin.медстатус73.рф/api/prices?populate=deep&filters[napravleniya_v_czeny][dir]=" + elem.attributes.dir)
+              fetch("https://admin.медстатус73.рф/api/prices?populate=deep&pagination[limit]=1000&filters[napravleniya_v_czeny][dir]=" + elem.attributes.dir)
                 .then((response) => response.json())
                 .then(function (commits) {
                   let dataС = commits.data;
+                  console.log(dataС);
                   for (let elemC of dataС) {
                     bufferData.push(
                       elemC.attributes ? (
@@ -84,7 +85,7 @@ const Price = () => {
           });
           
       }, []);
-      setTimeout(() => { setState(true);}, 8000)
+      setTimeout(() => { setState(true);}, 5000)
       if (state){
         return price;
       }
